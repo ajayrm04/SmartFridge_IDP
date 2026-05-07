@@ -3,27 +3,46 @@
 // Use this for admin operations in server functions and server routes only.
 // For user-authenticated queries (with RLS), use the auth middleware instead.
 import { createClient } from '@supabase/supabase-js';
+import { readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
 import type { Database } from './types';
 
 function createMockSupabaseAdminClient() {
+  const dbPath = join(process.cwd(), 'db.json');
+
+  const loadStore = () => {
+    try {
+      const data = readFileSync(dbPath, 'utf8');
+      return JSON.parse(data);
+    } catch (err) {
+      // If file doesn't exist, return default data
+      return {
+        system_settings: [
+          { id: 1, target_temp: 4, kp: 2, ki: 0.1, kd: 0.5, manual_override: false, compressor_manual: false, fan_manual: false },
+        ],
+        sensor_readings: [
+          { id: 1, zone_id: 'main', temperature: 5.1, humidity: 68, ammonia: 0.42, energy_w: 122, compressor_on: true, fan_on: true, created_at: new Date().toISOString() },
+        ],
+        food_items: [],
+        alerts: [],
+        control_logs: [],
+        ai_recommendations: [],
+      };
+    }
+  };
+
+  const saveStore = (store: Record<string, any[]>) => {
+    try {
+      writeFileSync(dbPath, JSON.stringify(store, null, 2));
+    } catch (err) {
+      console.error('Failed to save db.json:', err);
+    }
+  };
+
   const now = () => new Date().toISOString();
   const deepClone = <T>(value: T) => JSON.parse(JSON.stringify(value)) as T;
 
-  const store: Record<string, any[]> = {
-    system_settings: [
-      { id: 1, target_temp: 4, kp: 2, ki: 0.1, kd: 0.5, manual_override: false, compressor_manual: false, fan_manual: false },
-    ],
-    sensor_readings: [
-      { id: 1, zone_id: 'main', temperature: 5.1, humidity: 68, ammonia: 0.42, energy_w: 122, compressor_on: true, fan_on: true, created_at: now() },
-    ],
-    food_items: [
-      { id: 1, name: 'Green beans', category: 'vegetable', zone_id: 'main', base_shelf_life_hours: 96, activation_energy_kj: 45, spoilage_pct: 15, stored_at: now(), last_updated: now() },
-      { id: 2, name: 'Strawberries', category: 'fruit', zone_id: 'main', base_shelf_life_hours: 72, activation_energy_kj: 50, spoilage_pct: 30, stored_at: now(), last_updated: now() },
-    ],
-    alerts: [],
-    control_logs: [],
-    ai_recommendations: [],
-  };
+  let store = loadStore();
 
   type QueryState = {
     table: string;
@@ -100,6 +119,7 @@ function createMockSupabaseAdminClient() {
       if (state.deleteMode) {
         const deleted = rows.filter((row) => !filtered.includes(row));
         store[table] = deleted;
+        saveStore(store);
         return { data: filtered.map(normalizeRow), error: null };
       }
       if (state.updatePayload) {
@@ -110,6 +130,7 @@ function createMockSupabaseAdminClient() {
           return row;
         });
         store[table] = updatedRows;
+        saveStore(store);
         return { data: updatedRows.filter((row) => filtered.includes(row)).map(normalizeRow), error: null };
       }
       return buildResult(filtered.map(normalizeRow), state);
@@ -131,6 +152,7 @@ function createMockSupabaseAdminClient() {
           return { id: row.id ?? nextId, ...row, created_at: row.created_at ?? now() };
         });
         store[table] = store[table].concat(inserted);
+        saveStore(store);
         return Promise.resolve({ data: inserted.map(normalizeRow), error: null });
       },
       update(payload: Record<string, any>) {

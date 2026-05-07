@@ -1,0 +1,632 @@
+{
+  "system_settings": [
+    {
+      "id": 1,
+      "target_temp": 4,
+      "kp": 2,
+      "ki": 0.1,
+      "kd": 0.5,
+      "manual_override": false,
+      "compressor_manual": false,
+      "fan_manual": false
+    }
+  ],
+  "sensor_readings": [
+    {
+      "id": 1,
+      "zone_id": "main",
+      "temperature": 5.1,
+      "humidity": 68,
+      "ammonia": 0.42,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:33:39.531Z"
+    },
+    {
+      "id": 3,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:33:40.071Z"
+    },
+    {
+      "id": 4,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:33:44.083Z"
+    },
+    {
+      "id": 5,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:33:48.092Z"
+    },
+    {
+      "id": 6,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:33:52.087Z"
+    },
+    {
+      "id": 7,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:33:56.078Z"
+    },
+    {
+      "id": 8,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:34:00.096Z"
+    },
+    {
+      "id": 9,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:34:04.076Z"
+    },
+    {
+      "id": 10,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:34:08.077Z"
+    },
+    {
+      "id": 11,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:34:12.082Z"
+    },
+    {
+      "id": 12,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:34:16.213Z"
+    },
+    {
+      "id": 13,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:34:20.788Z"
+    },
+    {
+      "id": 14,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:34:24.782Z"
+    },
+    {
+      "id": 15,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:34:52.223Z"
+    },
+    {
+      "id": 16,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:34:56.775Z"
+    },
+    {
+      "id": 17,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:35:00.768Z"
+    },
+    {
+      "id": 18,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:35:04.226Z"
+    },
+    {
+      "id": 19,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:35:08.773Z"
+    },
+    {
+      "id": 20,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:35:12.777Z"
+    },
+    {
+      "id": 21,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:35:16.221Z"
+    },
+    {
+      "id": 22,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:35:20.218Z"
+    },
+    {
+      "id": 23,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:35:24.778Z"
+    },
+    {
+      "id": 24,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:35:28.766Z"
+    },
+    {
+      "id": 25,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:35:32.767Z"
+    },
+    {
+      "id": 26,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:35:36.771Z"
+    },
+    {
+      "id": 27,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:35:40.240Z"
+    },
+    {
+      "id": 28,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:35:44.770Z"
+    },
+    {
+      "id": 29,
+      "zone_id": "main",
+      "temperature": 0,
+      "humidity": 0,
+      "ammonia": 0,
+      "energy_w": 8,
+      "compressor_on": false,
+      "fan_on": false,
+      "created_at": "2026-05-07T20:35:48.780Z"
+    }
+  ],
+  "food_items": [
+    {
+      "id": 1,
+      "name": "Milk",
+      "category": "dairy",
+      "zone_id": "main",
+      "base_shelf_life_hours": 56,
+      "activation_energy_kj": 80,
+      "stored_at": "2026-05-07T20:33:50.416Z",
+      "last_updated": "2026-05-07T20:35:48.781Z",
+      "spoilage_pct": 0.032,
+      "created_at": "2026-05-07T20:33:50.416Z",
+      "updated_at": "2026-05-07T20:35:48.781Z"
+    },
+    {
+      "id": 2,
+      "name": "Apple",
+      "category": "fruits",
+      "zone_id": "main",
+      "base_shelf_life_hours": 240,
+      "activation_energy_kj": 75,
+      "stored_at": "2026-05-07T20:34:03.667Z",
+      "last_updated": "2026-05-07T20:35:48.781Z",
+      "spoilage_pct": 0.007,
+      "created_at": "2026-05-07T20:34:03.667Z",
+      "updated_at": "2026-05-07T20:35:48.782Z"
+    },
+    {
+      "id": 3,
+      "name": "Brinjal",
+      "category": "vegetables",
+      "zone_id": "main",
+      "base_shelf_life_hours": 120,
+      "activation_energy_kj": 85,
+      "stored_at": "2026-05-07T20:34:14.217Z",
+      "last_updated": "2026-05-07T20:35:48.781Z",
+      "spoilage_pct": 0.011,
+      "created_at": "2026-05-07T20:34:14.217Z",
+      "updated_at": "2026-05-07T20:35:48.783Z"
+    }
+  ],
+  "alerts": [],
+  "control_logs": [
+    {
+      "id": 1,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:33:39.533Z"
+    },
+    {
+      "id": 2,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:33:40.072Z"
+    },
+    {
+      "id": 3,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:33:44.085Z"
+    },
+    {
+      "id": 4,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:33:48.092Z"
+    },
+    {
+      "id": 5,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:33:52.091Z"
+    },
+    {
+      "id": 6,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:33:56.081Z"
+    },
+    {
+      "id": 7,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:34:00.097Z"
+    },
+    {
+      "id": 8,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:34:04.078Z"
+    },
+    {
+      "id": 9,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:34:08.080Z"
+    },
+    {
+      "id": 10,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:34:12.087Z"
+    },
+    {
+      "id": 11,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:34:16.215Z"
+    },
+    {
+      "id": 12,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:34:20.791Z"
+    },
+    {
+      "id": 13,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:34:24.784Z"
+    },
+    {
+      "id": 14,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:34:52.225Z"
+    },
+    {
+      "id": 15,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:34:56.777Z"
+    },
+    {
+      "id": 16,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:35:00.770Z"
+    },
+    {
+      "id": 17,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:35:04.234Z"
+    },
+    {
+      "id": 18,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:35:08.775Z"
+    },
+    {
+      "id": 19,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:35:12.779Z"
+    },
+    {
+      "id": 20,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:35:16.226Z"
+    },
+    {
+      "id": 21,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:35:20.221Z"
+    },
+    {
+      "id": 22,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:35:24.780Z"
+    },
+    {
+      "id": 23,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:35:28.768Z"
+    },
+    {
+      "id": 24,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:35:32.769Z"
+    },
+    {
+      "id": 25,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:35:36.774Z"
+    },
+    {
+      "id": 26,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:35:40.246Z"
+    },
+    {
+      "id": 27,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:35:44.772Z"
+    },
+    {
+      "id": 28,
+      "prev_temp": 0,
+      "target_temp": 4,
+      "cooling_level": 0,
+      "pid_output": 0,
+      "reason": "Within target band",
+      "created_at": "2026-05-07T20:35:48.784Z"
+    }
+  ],
+  "ai_recommendations": []
+}
