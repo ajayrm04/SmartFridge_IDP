@@ -18,9 +18,7 @@ function SensorsPage() {
   const cards = [
     { key: "temperature", label: "Temperature", unit: "°C", icon: Snowflake, safe: (v: number) => v < 6, danger: (v: number) => v > 8 },
     { key: "humidity", label: "Humidity", unit: "%", icon: Droplets, safe: (v: number) => v < 80, danger: (v: number) => v > 88 },
-    { key: "ammonia", label: "Ammonia (NH₃)", unit: "ppm", icon: FlaskConical, safe: (v: number) => v < 1, danger: (v: number) => v > 2 },
-    { key: "co2", label: "CO₂", unit: "ppm", icon: Wind, safe: (v: number) => v < 800, danger: (v: number) => v > 1000 },
-    { key: "ethylene", label: "Ethylene", unit: "ppm", icon: FlaskConical, safe: (v: number) => v < 5, danger: (v: number) => v > 8 },
+    { key: "ammonia", label: "Gas Concetration", unit: "ppm", icon: FlaskConical, safe: (v: number) => v < 1, danger: (v: number) => v > 2 },
     { key: "energy_w", label: "Energy draw", unit: "W", icon: Zap, safe: () => true, danger: () => false },
   ];
 
@@ -55,7 +53,7 @@ function SensorsPage() {
               </div>
               <div className="mt-3 flex items-baseline gap-1.5">
                 <div className="font-display text-4xl font-semibold tabular-nums" style={{ color }}>
-                  {v.toFixed(c.key === "co2" || c.key === "energy_w" ? 0 : 2)}
+                  {v.toFixed(c.key === "energy_w" ? 0 : 2)}
                 </div>
                 <span className="text-xs text-muted-foreground">{c.unit}</span>
               </div>

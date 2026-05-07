@@ -1,5 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
-import { spoilageDelta, remainingHours, arrheniusRate, humidityFactor, pidStep } from "@/lib/spoilage";
+import { spoilageDelta, remainingHours, arrheniusRate, humidityFactor, pidStep, calculateRealTimeSpoilage } from "@/lib/spoilage";
 
 // The URL of your Node.js backend
 const BACKEND_URL = "http://127.0.0.1:3000";
@@ -48,11 +48,9 @@ async function generateReading() {
 
   // 6. Return the combined object for Supabase insertion
   return {
-    temperature: Number(realData.temperature),
+    temperature:Number(realData.temperature),
     humidity: Number(realData.humidity),
     ammonia: Number(realData.gas_level), // Mapping your MQ3 gas_level here
-    co2: 400, // Placeholder as MQ3 doesn't detect CO2 specifically
-    ethylene: 0, // Placeholder
     energy_w: (compressorOn ? 110 : 8) + (fanOn ? 12 : 0), 
     compressor_on: compressorOn,
     fan_on: fanOn,
@@ -68,26 +66,31 @@ export const tickSimulation = createServerFn({ method: "POST" }).handler(async (
   await (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("sensor_readings").insert({
     zone_id: "main",
     temperature: r.temperature, humidity: r.humidity,
-    ammonia: r.ammonia, co2: r.co2, ethylene: r.ethylene,
+    ammonia: r.ammonia,
     energy_w: r.energy_w, compressor_on: r.compressor_on, fan_on: r.fan_on,
   });
 
-  // Advance spoilage for each food item (assume tick = 5 sec sim → scale to 30 min sim time per tick for visible movement)
-  const dtHours = 0.5;
+  // Advance spoilage for each food item based on real time elapsed since storage
+  const currentTime = new Date();
   const { data: foods } = await (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("food_items").select("*");
   if (foods) {
     for (const f of foods as any[]) {
-      const delta = spoilageDelta({
-        tempC: r.temperature, rh: r.humidity, ethylene: r.ethylene,
-        category: f.category, baseShelfLifeHours: Number(f.base_shelf_life_hours),
-        EaKJ: Number(f.activation_energy_kj), dtHours,
+      const realTimeSpoilage = calculateRealTimeSpoilage({
+        storedAt: f.stored_at || f.last_updated || new Date().toISOString(),
+        currentTime,
+        tempC: r.temperature,
+        rh: r.humidity,
+        ammonia: r.ammonia,
+        category: f.category,
+        baseShelfLifeHours: Number(f.base_shelf_life_hours),
+        EaKJ: Number(f.activation_energy_kj),
       });
-      const next = Math.min(100, Number(f.spoilage_pct) + delta);
+
       await (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("food_items").update({
-        spoilage_pct: +next.toFixed(3), last_updated: new Date().toISOString(),
+        spoilage_pct: +realTimeSpoilage.toFixed(3), last_updated: currentTime.toISOString(),
       }).eq("id", f.id);
 
-      if (next > 80 && Number(f.spoilage_pct) <= 80) {
+      if (realTimeSpoilage > 80 && Number(f.spoilage_pct) <= 80) {
         await (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("alerts").insert({
           alert_type: "spoilage", severity: "CRITICAL",
           message: `${f.name} has crossed 80% spoilage — consume or remove.`,
@@ -128,28 +131,41 @@ export const getOverview = createServerFn({ method: "GET" }).handler(async () =>
     (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("alerts").select("*").eq("resolved", false).order("created_at", { ascending: false }).limit(20),
     (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("system_settings").select("*").eq("id", 1).maybeSingle(),
     (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("sensor_readings").select("created_at,energy_w,compressor_on").order("created_at", { ascending: false }).limit(60),
-    (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("sensor_readings").select("created_at,temperature,humidity,ammonia,co2,ethylene").order("created_at", { ascending: false }).limit(60),
+    (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("sensor_readings").select("created_at,temperature,humidity,ammonia").order("created_at", { ascending: false }).limit(60),
   ]);
 
   const items = foods.data ?? [];
+  const currentTime = new Date();
   const enriched = items.map((f: any) => {
+    // Calculate real-time spoilage for accurate display
+    const realTimeSpoilage = latest.data ? calculateRealTimeSpoilage({
+      storedAt: f.stored_at || f.last_updated || currentTime.toISOString(),
+      currentTime,
+      tempC: Number(latest.data.temperature),
+      rh: Number(latest.data.humidity),
+      ammonia: Number(latest.data.ammonia),
+      category: f.category,
+      baseShelfLifeHours: Number(f.base_shelf_life_hours),
+      EaKJ: Number(f.activation_energy_kj),
+    }) : Number(f.spoilage_pct);
+
     const ratePerH = latest.data
       ? spoilageDelta({
           tempC: Number(latest.data.temperature),
           rh: Number(latest.data.humidity),
-          ethylene: Number(latest.data.ethylene),
+          ammonia: Number(latest.data.ammonia),
           category: f.category,
           baseShelfLifeHours: Number(f.base_shelf_life_hours),
           EaKJ: Number(f.activation_energy_kj),
           dtHours: 1,
         })
       : 0;
-    const remH = remainingHours(Number(f.spoilage_pct), ratePerH);
+    const remH = remainingHours(realTimeSpoilage, ratePerH);
     const risk =
-      Number(f.spoilage_pct) > 75 ? "critical"
-      : Number(f.spoilage_pct) > 45 ? "warning"
+      realTimeSpoilage > 75 ? "critical"
+      : realTimeSpoilage > 45 ? "warning"
       : "safe";
-    return { ...f, current_rate: +ratePerH.toFixed(3), remaining_hours: isFinite(remH) ? +remH.toFixed(1) : null, risk };
+    return { ...f, spoilage_pct: +realTimeSpoilage.toFixed(3), current_rate: +ratePerH.toFixed(3), remaining_hours: isFinite(remH) ? +remH.toFixed(1) : null, risk };
   });
 
   const avgSpoilage = items.length
@@ -171,9 +187,11 @@ export const getOverview = createServerFn({ method: "GET" }).handler(async () =>
 export const addFoodItem = createServerFn({ method: "POST" })
   .inputValidator((d: { name: string; category: string; zone: string; baseShelfHours: number; EaKJ: number }) => d)
   .handler(async ({ data }) => {
+    const now = new Date().toISOString();
     await (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("food_items").insert({
       name: data.name, category: data.category, zone_id: data.zone,
       base_shelf_life_hours: data.baseShelfHours, activation_energy_kj: data.EaKJ,
+      stored_at: now, last_updated: now, spoilage_pct: 0,
     });
     return { ok: true };
   });
@@ -223,9 +241,22 @@ export const generateRecommendation = createServerFn({ method: "POST" }).handler
     return { recommendation: fallback };
   }
 
+  const currentTime = new Date();
   const ctx = {
     latestReading: latest,
-    foodItems: foods?.map((f: any) => ({ name: f.name, category: f.category, spoilage: f.spoilage_pct })),
+    foodItems: foods?.map((f: any) => {
+      const realTimeSpoilage = latest ? calculateRealTimeSpoilage({
+        storedAt: f.stored_at || f.last_updated || currentTime.toISOString(),
+        currentTime,
+        tempC: Number(latest.temperature),
+        rh: Number(latest.humidity),
+        ammonia: Number(latest.ammonia),
+        category: f.category,
+        baseShelfLifeHours: Number(f.base_shelf_life_hours),
+        EaKJ: Number(f.activation_energy_kj),
+      }) : Number(f.spoilage_pct);
+      return { name: f.name, category: f.category, spoilage: +realTimeSpoilage.toFixed(1) };
+    }),
     activeAlerts: alerts?.map((a: any) => `${a.severity}: ${a.message}`),
   };
 
@@ -259,29 +290,46 @@ export const getRecommendations = createServerFn({ method: "GET" }).handler(asyn
 });
 
 // ---- Predictions: 24h forward simulation per food item ----
-export const getForecast = createServerFn({ method: "GET" }).handler(async () => {
-  const [{ data: latest }, { data: foods }] = await Promise.all([
-    (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("sensor_readings").select("*").order("created_at", { ascending: false }).limit(1).maybeSingle(),
-    (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("food_items").select("*"),
-  ]);
-  if (!latest || !foods) return { points: [] };
+export const getForecast = createServerFn({ method: "GET" })
+  .inputValidator((d: { maxHours?: number }) => d)
+  .handler(async ({ data }) => {
+    const maxHours = data?.maxHours ?? 12;
+    const [{ data: latest }, { data: foods }] = await Promise.all([
+      (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("sensor_readings").select("*").order("created_at", { ascending: false }).limit(1).maybeSingle(),
+      (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("food_items").select("*"),
+    ]);
+    if (!latest || !foods) return { points: [] };
 
-  const points: Array<{ hour: number; [k: string]: number }> = [];
-  for (let h = 0; h <= 24; h++) {
-    const row: any = { hour: h };
-    for (const f of foods as any[]) {
-      const rate = spoilageDelta({
-        tempC: Number(latest.temperature), rh: Number(latest.humidity),
-        ethylene: Number(latest.ethylene), category: f.category,
-        baseShelfLifeHours: Number(f.base_shelf_life_hours),
-        EaKJ: Number(f.activation_energy_kj), dtHours: 1,
-      });
-      row[f.name] = Math.min(100, Number(f.spoilage_pct) + rate * h);
+    const currentTime = new Date();
+    const points: Array<{ hour: number; [k: string]: number }> = [];
+    for (let h = 0; h <= maxHours; h++) {
+      const row: any = { hour: h };
+      for (const f of foods as any[]) {
+        // Calculate current real-time spoilage
+        const currentSpoilage = calculateRealTimeSpoilage({
+          storedAt: f.stored_at || f.last_updated || currentTime.toISOString(),
+          currentTime,
+          tempC: Number(latest.temperature),
+          rh: Number(latest.humidity),
+          ammonia: Number(latest.ammonia),
+          category: f.category,
+          baseShelfLifeHours: Number(f.base_shelf_life_hours),
+          EaKJ: Number(f.activation_energy_kj),
+        });
+
+        const rate = spoilageDelta({
+          tempC: Number(latest.temperature), rh: Number(latest.humidity),
+          ammonia: Number(latest.ammonia),
+          category: f.category,
+          baseShelfLifeHours: Number(f.base_shelf_life_hours),
+          EaKJ: Number(f.activation_energy_kj), dtHours: 1,
+        });
+        row[f.name] = Math.min(100, currentSpoilage + rate * h);
+      }
+      points.push(row);
     }
-    points.push(row);
-  }
-  return { points, foods: foods.map((f: any) => f.name) };
-});
+    return { points, foods: foods.map((f: any) => f.name) };
+  });
 
 // Arrhenius curve data
 export const getArrheniusCurve = createServerFn({ method: "GET" }).handler(async () => {

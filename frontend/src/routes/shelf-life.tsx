@@ -18,7 +18,7 @@ export const Route = createFileRoute("/shelf-life")({
 });
 
 const CATEGORY_DEFAULTS: Record<string, { Ea: number; hours: number }> = {
-  dairy: { Ea: 80, hours: 168 },
+  dairy: { Ea: 80, hours: 56 },
   fruits: { Ea: 75, hours: 240 },
   vegetables: { Ea: 85, hours: 120 },
   meat: { Ea: 95, hours: 72 },
@@ -52,7 +52,7 @@ function ShelfLifePage() {
       <PageHeader
         eyebrow="Operations · Inventory"
         title="Shelf-life intelligence"
-        description="Each item degrades according to live Arrhenius kinetics, humidity, and ethylene exposure."
+        description="Each item degrades according to live Arrhenius kinetics and humidity."
         action={
           <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>

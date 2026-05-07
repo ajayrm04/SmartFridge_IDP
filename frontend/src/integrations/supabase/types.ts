@@ -137,11 +137,9 @@ export type Database = {
       sensor_readings: {
         Row: {
           ammonia: number
-          co2: number
           compressor_on: boolean
           created_at: string
           energy_w: number
-          ethylene: number
           fan_on: boolean
           humidity: number
           id: number
@@ -150,11 +148,9 @@ export type Database = {
         }
         Insert: {
           ammonia?: number
-          co2?: number
           compressor_on?: boolean
           created_at?: string
           energy_w?: number
-          ethylene?: number
           fan_on?: boolean
           humidity: number
           id?: number
@@ -163,11 +159,9 @@ export type Database = {
         }
         Update: {
           ammonia?: number
-          co2?: number
           compressor_on?: boolean
           created_at?: string
           energy_w?: number
-          ethylene?: number
           fan_on?: boolean
           humidity?: number
           id?: number

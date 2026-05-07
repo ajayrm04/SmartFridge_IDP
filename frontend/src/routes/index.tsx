@@ -153,8 +153,6 @@ function OverviewPage() {
             <Row label="Compressor" value={latest?.compressor_on ? "ON" : "Idle"} accent={latest?.compressor_on ? "primary" : "muted"} icon={<Snowflake className="h-3.5 w-3.5" />} />
             <Row label="Fan" value={latest?.fan_on ? "ON" : "Idle"} accent={latest?.fan_on ? "primary" : "muted"} icon={<Wind className="h-3.5 w-3.5" />} />
             <Row label="Ammonia (NH₃)" value={`${Number(latest?.ammonia ?? 0).toFixed(2)} ppm`} accent="muted" />
-            <Row label="CO₂" value={`${Number(latest?.co2 ?? 0).toFixed(0)} ppm`} accent="muted" />
-            <Row label="Ethylene" value={`${Number(latest?.ethylene ?? 0).toFixed(2)} ppm`} accent="muted" />
           </div>
           <Button asChild className="mt-4 w-full" size="sm" variant="secondary">
             <Link to="/control"><Sparkles className="mr-1.5 h-3.5 w-3.5" />Tune controller</Link>

@@ -14,11 +14,11 @@ function createMockSupabaseAdminClient() {
       { id: 1, target_temp: 4, kp: 2, ki: 0.1, kd: 0.5, manual_override: false, compressor_manual: false, fan_manual: false },
     ],
     sensor_readings: [
-      { id: 1, zone_id: 'main', temperature: 5.1, humidity: 68, ammonia: 0.42, co2: 480, ethylene: 1.2, energy_w: 122, compressor_on: true, fan_on: true, created_at: now() },
+      { id: 1, zone_id: 'main', temperature: 5.1, humidity: 68, ammonia: 0.42, energy_w: 122, compressor_on: true, fan_on: true, created_at: now() },
     ],
     food_items: [
-      { id: 1, name: 'Green beans', category: 'vegetable', zone_id: 'main', base_shelf_life_hours: 96, activation_energy_kj: 45, spoilage_pct: 15, last_updated: now() },
-      { id: 2, name: 'Strawberries', category: 'fruit', zone_id: 'main', base_shelf_life_hours: 72, activation_energy_kj: 50, spoilage_pct: 30, last_updated: now() },
+      { id: 1, name: 'Green beans', category: 'vegetable', zone_id: 'main', base_shelf_life_hours: 96, activation_energy_kj: 45, spoilage_pct: 15, stored_at: now(), last_updated: now() },
+      { id: 2, name: 'Strawberries', category: 'fruit', zone_id: 'main', base_shelf_life_hours: 72, activation_energy_kj: 50, spoilage_pct: 30, stored_at: now(), last_updated: now() },
     ],
     alerts: [],
     control_logs: [],

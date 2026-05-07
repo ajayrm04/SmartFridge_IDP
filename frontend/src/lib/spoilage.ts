@@ -15,17 +15,15 @@ export function arrheniusRate(tempC: number, EaKJ: number): number {
   return Math.exp(-(Ea / R) * (1 / T - 1 / T_REF_K));
 }
 
-/** Humidity acceleration factor: dry/ideal ~1.0, very humid up to ~1.6. */
+/** Humidity acceleration factor: dry/ideal ~1.0, very humid has stronger impact. */
 export function humidityFactor(rh: number): number {
   if (rh <= 60) return 1;
-  return 1 + Math.min((rh - 60) / 40, 1) * 0.6;
+  return 1 + Math.min((rh - 60) / 30, 1) * 1.0;
 }
 
-export function ethyleneFactor(ppm: number, category: string): number {
-  if (category === "fruits" || category === "vegetables") {
-    return 1 + Math.min(ppm / 50, 1) * 0.4;
-  }
-  return 1;
+export function ammoniaFactor(ppm: number): number {
+  if (ppm <= 0.3) return 1;
+  return 1 + Math.min(ppm / 2, 1) * 1.8;
 }
 
 /**
@@ -35,23 +33,49 @@ export function ethyleneFactor(ppm: number, category: string): number {
 export function spoilageDelta(opts: {
   tempC: number;
   rh: number;
-  ethylene: number;
+  ammonia: number;
   category: string;
   baseShelfLifeHours: number;
   EaKJ: number;
   dtHours: number;
 }): number {
-  const k = arrheniusRate(opts.tempC, opts.EaKJ);
+  const k = Math.pow(arrheniusRate(opts.tempC, opts.EaKJ), 1.2);
   const h = humidityFactor(opts.rh);
-  const e = ethyleneFactor(opts.ethylene, opts.category);
+  const g = ammoniaFactor(opts.ammonia);
   // Base degradation per hour at reference = 100/baseShelfLifeHours
-  const ratePctPerHour = (100 / opts.baseShelfLifeHours) * k * h * e;
+  const ratePctPerHour = (100 / opts.baseShelfLifeHours) * k * h * g;
   return ratePctPerHour * opts.dtHours;
 }
 
 export function remainingHours(spoilagePct: number, currentRatePctPerHour: number): number {
   if (currentRatePctPerHour <= 0) return Infinity;
   return Math.max(0, (100 - spoilagePct) / currentRatePctPerHour);
+}
+
+/**
+ * Calculate real-time spoilage percentage based on time elapsed since storage
+ */
+export function calculateRealTimeSpoilage(opts: {
+  storedAt: string;
+  currentTime: Date;
+  tempC: number;
+  rh: number;
+  ammonia: number;
+  category: string;
+  baseShelfLifeHours: number;
+  EaKJ: number;
+}): number {
+  const storedTime = new Date(opts.storedAt);
+  const elapsedHours = (opts.currentTime.getTime() - storedTime.getTime()) / (1000 * 60 * 60);
+
+  if (elapsedHours <= 0) return 0;
+
+  const k = Math.pow(arrheniusRate(opts.tempC, opts.EaKJ), 1.2);
+  const h = humidityFactor(opts.rh);
+  const g = ammoniaFactor(opts.ammonia);
+  const ratePctPerHour = (100 / opts.baseShelfLifeHours) * k * h * g;
+
+  return Math.min(100, ratePctPerHour * elapsedHours);
 }
 
 /** Simple PID step for cooling control. */

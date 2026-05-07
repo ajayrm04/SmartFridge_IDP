@@ -51,7 +51,7 @@ function ArrheniusPage() {
             </ul>
           </div>
           <div className="mt-3 rounded-md border border-primary/20 bg-primary/5 p-3 text-xs text-muted-foreground">
-            FRIGOS multiplies k by humidity and ethylene factors before integrating spoilage over time.
+            FRIGOS multiplies k by humidity factor before integrating spoilage over time.
           </div>
         </Panel>
       </div>

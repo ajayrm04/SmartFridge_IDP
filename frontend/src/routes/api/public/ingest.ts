@@ -16,8 +16,6 @@ export const Route = createFileRoute("/api/public/ingest")({
             temperature: body.temperature,
             humidity: body.humidity ?? 70,
             ammonia: body.ammonia ?? 0,
-            co2: body.co2 ?? 400,
-            ethylene: body.ethylene ?? 0,
             energy_w: body.energy_w ?? 0,
             compressor_on: !!body.compressor_on,
             fan_on: !!body.fan_on,
