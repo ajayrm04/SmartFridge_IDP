@@ -1,34 +1,52 @@
 import { Request, Response } from 'express';
-import { getIo } from '../services/socketService';
 
+// Store latest sensor values in memory
+let sensorData = {
+  temperature: 0,
+  humidity: 0,
+  gas_level: 0,
+  relay_state: 0,
+  timestamp: new Date().toISOString() // Added so React knows when it updated
+};
+
+// Relay state memory
+let relayCommand = "OFF";
+
+// ─── Receive Sensor Data from ESP ─────────────────────
 export const receiveSensorData = (req: Request, res: Response) => {
-  try {
-    // Extract the data sent by your ESP8266
-    const { temperature, humidity, mq3Value } = req.body;
+  sensorData = {
+    temperature: Number(req.body.temperature) || 0,
+    humidity: Number(req.body.humidity) || 0,
+    gas_level: Number(req.body.gas_level) || 0,
+    relay_state: Number(req.body.relay_state) || 0,
+    timestamp: new Date().toISOString()
+  };
 
-    // Basic validation to ensure no empty data crashes the server
-    if (temperature === undefined || humidity === undefined || mq3Value === undefined) {
-      return res.status(400).json({ error: 'Missing sensor data' });
-    }
+  console.log("Received Sensor Data:");
+  console.log(sensorData);
 
-    // Package the data with a timestamp
-    const sensorData = {
-      temperature: Number(temperature),
-      humidity: Number(humidity),
-      mq3Value: Number(mq3Value),
-      timestamp: new Date().toISOString()
-    };
+  res.send("Data Received");
+};
 
-    console.log('📥 Data received from ESP:', sensorData);
+// ─── Send Relay Command To ESP ───────────────
+export const getRelayCommand = (req: Request, res: Response) => {
+  res.send(relayCommand);
+};
 
-    // Broadcast this data to the React frontend instantly
-    getIo().emit('sensorDataUpdate', sensorData);
+// ─── Frontend API (React fetches this) ────────────────
+export const getSensorData = (req: Request, res: Response) => {
+  res.json(sensorData);
+};
 
-    // Reply to the ESP8266 so it knows the data arrived safely
-    return res.status(200).json({ message: 'Data successfully processed' });
+// ─── Manual Relay Control ────────────────────
+export const turnRelayOn = (req: Request, res: Response) => {
+  relayCommand = "ON";
+  console.log("Relay turned ON");
+  res.send("Relay ON");
+};
 
-  } catch (error) {
-    console.error('Error processing sensor data:', error);
-    return res.status(500).json({ error: 'Internal server error' });
-  }
+export const turnRelayOff = (req: Request, res: Response) => {
+  relayCommand = "OFF";
+  console.log("Relay turned OFF");
+  res.send("Relay OFF");
 };
