@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useLiveQuery } from "@/hooks/use-live-query";
 import { getForecast } from "@/fridge.functions";
 import { PageHeader, Panel } from "@/components/ui-bits";
@@ -17,7 +17,40 @@ const COLORS = ["oklch(0.85 0.18 165)", "oklch(0.78 0.16 35)", "oklch(0.72 0.18 
 function PredictionsPage() {
   const [maxHours, setMaxHours] = useState(12);
   const { data } = useLiveQuery(() => getForecast({ data: { maxHours } }), 5000);
-  
+  const [focusedItem, setFocusedItem] = useState<string>("all");
+
+  useEffect(() => {
+    if (!focusedItem && (data?.foods?.length ?? 0) > 0) {
+      setFocusedItem(data!.foods[0]);
+    }
+  }, [data?.foods, focusedItem]);
+
+  const selectedDetail = (data?.foodDetails ?? []).find((f: any) => f.name === focusedItem) ?? null;
+
+  const chartData = useMemo(() => {
+    if (!focusedItem) return [];
+    if (focusedItem === "all") return data?.points ?? [];
+    const points = data?.points ?? [];
+    const currentSpoilage = selectedDetail?.currentSpoilage ?? 0;
+    const scannedExpiryAt = selectedDetail?.scannedExpiryAt ? new Date(selectedDetail.scannedExpiryAt).getTime() : null;
+    const nowMs = Date.now();
+    const scannedHoursToExpiry = scannedExpiryAt != null ? (scannedExpiryAt - nowMs) / (60 * 60 * 1000) : null;
+
+    return points.map((row: any) => {
+      const predictedSpoilage = row[focusedItem];
+      const nextRow: any = { hour: row.hour, predicted: predictedSpoilage };
+      if (scannedHoursToExpiry != null) {
+        if (scannedHoursToExpiry <= 0) {
+          nextRow.scanned = 100;
+        } else {
+          const ratio = Math.max(0, Math.min(1, row.hour / scannedHoursToExpiry));
+          nextRow.scanned = Math.min(100, currentSpoilage + (100 - currentSpoilage) * ratio);
+        }
+      }
+      return nextRow;
+    });
+  }, [data?.points, focusedItem, selectedDetail?.currentSpoilage, selectedDetail?.scannedExpiryAt]);
+
   return (
     <div className="mx-auto max-w-7xl">
       <PageHeader
@@ -26,6 +59,27 @@ function PredictionsPage() {
         description="Forward-integrated Arrhenius model — projects each item's spoilage curve under current conditions."
       />
       <Panel title="Projected spoilage curves">
+        <div className="mb-3 flex items-center gap-2 text-sm">
+          <span className="text-muted-foreground">Select item:</span>
+          <select
+            className="rounded-md border border-border bg-surface text-foreground px-2 py-1 outline-none ring-0"
+            value={focusedItem}
+            onChange={(e) => setFocusedItem(e.target.value)}
+          >
+            <option value="all">All items</option>
+            {(data?.foods ?? []).map((name: string) => (
+              <option key={name} value={name}>{name}</option>
+            ))}
+          </select>
+          {focusedItem !== "all" && selectedDetail?.scannedExpiryAt && (
+            <span className="text-xs text-emerald-400">Scanned: {new Date(selectedDetail.scannedExpiryAt).toLocaleString()}</span>
+          )}
+          {focusedItem !== "all" && selectedDetail?.predictedExpiryAt && (
+            <span className="text-xs text-blue-400">
+              Predicted: {new Date(selectedDetail.predictedExpiryAt).toLocaleString()}
+            </span>
+          )}
+        </div>
         <div className="mb-4 flex items-center gap-3">
           <Button
             size="sm"
@@ -58,15 +112,44 @@ function PredictionsPage() {
         </div>
         <div className="h-96">
           <ResponsiveContainer>
-            <LineChart data={data?.points ?? []}>
+            <LineChart data={chartData}>
               <CartesianGrid stroke="oklch(1 0 0 / 0.04)" />
               <XAxis dataKey="hour" stroke="oklch(0.7 0.02 250)" fontSize={11} label={{ value: "hours from now", position: "insideBottom", offset: -2, fill: "oklch(0.7 0.02 250)", fontSize: 10 }} />
               <YAxis stroke="oklch(0.7 0.02 250)" fontSize={11} unit="%" />
               <Tooltip contentStyle={{ background: "oklch(0.21 0.03 262)", border: "1px solid oklch(0.28 0.025 262)", borderRadius: 8, fontSize: 12 }} />
               <Legend wrapperStyle={{ fontSize: 11 }} />
-              {(data?.foods ?? []).map((name: string, i: number) => (
-                <Line key={name} type="monotone" dataKey={name} stroke={COLORS[i % COLORS.length]} strokeWidth={2} dot={false} />
-              ))}
+              {focusedItem === "all"
+                ? (data?.foods ?? []).map((name: string, i: number) => (
+                    <Line
+                      key={name}
+                      type="monotone"
+                      dataKey={name}
+                      name={name}
+                      stroke={COLORS[i % COLORS.length]}
+                      strokeWidth={2}
+                      dot={false}
+                    />
+                  ))
+                : focusedItem && (
+                    <Line
+                      type="monotone"
+                      dataKey="predicted"
+                      name={`${focusedItem} · predicted`}
+                      stroke="oklch(0.70 0.16 220)"
+                      strokeWidth={2}
+                      dot={false}
+                    />
+                  )}
+              {focusedItem !== "all" && selectedDetail?.scannedExpiryAt && focusedItem && (
+                <Line
+                  type="monotone"
+                  dataKey="scanned"
+                  name={`${focusedItem} · scanned`}
+                  stroke="oklch(0.78 0.18 155)"
+                  strokeWidth={2}
+                  dot={false}
+                />
+              )}
             </LineChart>
           </ResponsiveContainer>
         </div>

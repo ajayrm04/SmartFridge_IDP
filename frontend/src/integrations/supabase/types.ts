@@ -106,6 +106,8 @@ export type Database = {
           id: string
           last_updated: string
           name: string
+          scanned_expiry_at: string | null
+          scanned_expiry_date: string | null
           spoilage_pct: number
           stored_at: string
           zone_id: string
@@ -117,6 +119,8 @@ export type Database = {
           id?: string
           last_updated?: string
           name: string
+          scanned_expiry_at?: string | null
+          scanned_expiry_date?: string | null
           spoilage_pct?: number
           stored_at?: string
           zone_id?: string
@@ -128,6 +132,8 @@ export type Database = {
           id?: string
           last_updated?: string
           name?: string
+          scanned_expiry_at?: string | null
+          scanned_expiry_date?: string | null
           spoilage_pct?: number
           stored_at?: string
           zone_id?: string

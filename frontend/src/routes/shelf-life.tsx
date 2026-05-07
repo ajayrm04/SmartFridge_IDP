@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Trash2, Timer, Thermometer, Droplets, Wind, TrendingUp, AlertTriangle, Clock, Activity } from "lucide-react";
+import { Plus, Trash2, Timer, Thermometer, Droplets, Wind, TrendingUp, AlertTriangle, Clock, Activity, ScanText } from "lucide-react";
 import { useLiveQuery } from "@/hooks/use-live-query";
-import { getOverview, addFoodItem, removeFoodItem } from "@/fridge.functions";
+import { getOverview, addFoodItem, removeFoodItem, updateFoodScannedExpiry } from "@/fridge.functions";
 import { PageHeader, Panel } from "@/components/ui-bits";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,6 +14,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { toast } from "sonner";
+import Tesseract from "tesseract.js";
 
 export const Route = createFileRoute("/shelf-life")({
   head: () => ({ meta: [{ title: "Shelf Life · FRIGOS" }] }),
@@ -34,7 +35,14 @@ function ShelfLifePage() {
   const latest = data?.latest;
   const avgSpoilage = data?.avgSpoilage ?? 0;
   const [open, setOpen] = useState(false);
+  const [scanOpen, setScanOpen] = useState(false);
   const [form, setForm] = useState({ name: "", category: "dairy", zone: "main" });
+  const [scanForm, setScanForm] = useState({
+    foodId: "",
+    todayDate: new Date().toISOString().slice(0, 10),
+    imageFile: null as File | null,
+  });
+  const [scanLoading, setScanLoading] = useState(false);
 
   const handleAdd = async () => {
     if (!form.name.trim()) return;
@@ -52,6 +60,67 @@ function ShelfLifePage() {
     refresh();
   };
 
+  const parseDateByTodayFormat = (rawValue: string, todayDate: string): string | null => {
+    const cleaned = rawValue.trim().replace(/\s+/g, "");
+    const match = cleaned.match(/^(\d{1,2})[\/\-\.](\d{1,2})[\/\-\.](\d{2,4})$/);
+    if (!match) return null;
+
+    let a = Number(match[1]);
+    let b = Number(match[2]);
+    let y = Number(match[3]);
+    if (y < 100) y += 2000;
+
+    const today = new Date(todayDate);
+    const dayFirst = !Number.isNaN(today.getTime()) && today.getDate() > 12;
+    const month = dayFirst ? b : a;
+    const day = dayFirst ? a : b;
+    if (month < 1 || month > 12 || day < 1 || day > 31) return null;
+
+    const dt = new Date(Date.UTC(y, month - 1, day));
+    if (Number.isNaN(dt.getTime())) return null;
+    return dt.toISOString().slice(0, 10);
+  };
+
+  const extractExpiryDateFromText = (text: string, todayDate: string): string | null => {
+    const upper = text.toUpperCase();
+    const tokens = upper.match(/\d{1,2}[\/\-\.]\d{1,2}[\/\-\.]\d{2,4}/g) ?? [];
+    for (const token of tokens) {
+      const parsed = parseDateByTodayFormat(token, todayDate);
+      if (parsed) return parsed;
+    }
+    return null;
+  };
+
+  const handleScanExpiry = async () => {
+    if (!scanForm.foodId || !scanForm.imageFile || !scanForm.todayDate) {
+      toast.error("Select item, today date, and image first.");
+      return;
+    }
+    try {
+      setScanLoading(true);
+      const { data } = await Tesseract.recognize(scanForm.imageFile, "eng", {});
+      const expiryDate = extractExpiryDateFromText(data.text, scanForm.todayDate);
+      if (!expiryDate) {
+        toast.error("Could not detect expiry date. Try a clearer image.");
+        return;
+      }
+      const scannedExpiryAt = new Date(`${expiryDate}T23:59:59`).toISOString();
+      await updateFoodScannedExpiry({ data: { id: scanForm.foodId, scannedExpiryAt } });
+      toast.success(`Scanned expiry saved: ${new Date(scannedExpiryAt).toLocaleString()}`);
+      setScanForm({
+        foodId: "",
+        todayDate: new Date().toISOString().slice(0, 10),
+        imageFile: null,
+      });
+      setScanOpen(false);
+      refresh();
+    } catch {
+      toast.error("Expiry scan failed. Please retry.");
+    } finally {
+      setScanLoading(false);
+    }
+  };
+
   const criticalItems = foods.filter((f: any) => f.risk === "critical").length;
   const warningItems = foods.filter((f: any) => f.risk === "warning").length;
   const safeItems = foods.filter((f: any) => f.risk === "safe").length;
@@ -63,36 +132,79 @@ function ShelfLifePage() {
         title="Shelf-life intelligence"
         description="Real-time spoilage tracking with Arrhenius kinetics, environmental factors, and predictive analytics."
         action={
-          <Dialog open={open} onOpenChange={setOpen}>
-            <DialogTrigger asChild>
-              <Button size="sm"><Plus className="mr-1 h-3.5 w-3.5" />Add item</Button>
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader><DialogTitle>Add food item</DialogTitle></DialogHeader>
-              <div className="space-y-3">
-                <div><Label>Name</Label><Input value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="e.g. Cheddar" /></div>
-                <div>
-                  <Label>Category</Label>
-                  <Select value={form.category} onValueChange={v => setForm({ ...form, category: v })}>
-                    <SelectTrigger><SelectValue /></SelectTrigger>
-                    <SelectContent>
-                      {Object.keys(CATEGORY_DEFAULTS).map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}
-                    </SelectContent>
-                  </Select>
+          <div className="flex items-center gap-2">
+            <Dialog open={scanOpen} onOpenChange={setScanOpen}>
+              <DialogTrigger asChild>
+                <Button size="sm" variant="outline"><ScanText className="mr-1 h-3.5 w-3.5" />Scan expiry</Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader><DialogTitle>Scan expiry date</DialogTitle></DialogHeader>
+                <div className="space-y-3">
+                  <div>
+                    <Label>Tracked item</Label>
+                    <Select value={scanForm.foodId} onValueChange={v => setScanForm(prev => ({ ...prev, foodId: v }))}>
+                      <SelectTrigger><SelectValue placeholder="Select item" /></SelectTrigger>
+                      <SelectContent>
+                        {foods.map((f: any) => <SelectItem key={f.id} value={f.id}>{f.name}</SelectItem>)}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div>
+                    <Label>Today date</Label>
+                    <Input
+                      type="date"
+                      value={scanForm.todayDate}
+                      onChange={e => setScanForm(prev => ({ ...prev, todayDate: e.target.value }))}
+                    />
+                  </div>
+                  <div>
+                    <Label>Photo (expiry label)</Label>
+                    <Input
+                      type="file"
+                      accept="image/*"
+                      onChange={e => setScanForm(prev => ({ ...prev, imageFile: e.target.files?.[0] ?? null }))}
+                    />
+                  </div>
                 </div>
-                <div>
-                  <Label>Zone</Label>
-                  <Select value={form.zone} onValueChange={v => setForm({ ...form, zone: v })}>
-                    <SelectTrigger><SelectValue /></SelectTrigger>
-                    <SelectContent>
-                      {["main", "top", "crisper", "door", "freezer"].map(z => <SelectItem key={z} value={z}>{z}</SelectItem>)}
-                    </SelectContent>
-                  </Select>
+                <DialogFooter>
+                  <Button onClick={handleScanExpiry} disabled={scanLoading}>
+                    {scanLoading ? "Scanning..." : "Run scan"}
+                  </Button>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
+
+            <Dialog open={open} onOpenChange={setOpen}>
+              <DialogTrigger asChild>
+                <Button size="sm"><Plus className="mr-1 h-3.5 w-3.5" />Add item</Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader><DialogTitle>Add food item</DialogTitle></DialogHeader>
+                <div className="space-y-3">
+                  <div><Label>Name</Label><Input value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="e.g. Cheddar" /></div>
+                  <div>
+                    <Label>Category</Label>
+                    <Select value={form.category} onValueChange={v => setForm({ ...form, category: v })}>
+                      <SelectTrigger><SelectValue /></SelectTrigger>
+                      <SelectContent>
+                        {Object.keys(CATEGORY_DEFAULTS).map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div>
+                    <Label>Zone</Label>
+                    <Select value={form.zone} onValueChange={v => setForm({ ...form, zone: v })}>
+                      <SelectTrigger><SelectValue /></SelectTrigger>
+                      <SelectContent>
+                        {["main", "top", "crisper", "door", "freezer"].map(z => <SelectItem key={z} value={z}>{z}</SelectItem>)}
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </div>
-              </div>
-              <DialogFooter><Button onClick={handleAdd}>Add</Button></DialogFooter>
-            </DialogContent>
-          </Dialog>
+                <DialogFooter><Button onClick={handleAdd}>Add</Button></DialogFooter>
+              </DialogContent>
+            </Dialog>
+          </div>
         }
       />
 
@@ -252,6 +364,14 @@ function ShelfLifePage() {
                             <div className="text-xs text-muted-foreground">
                               {Math.floor(f.remaining_hours / 24)}d {Math.floor(f.remaining_hours % 24)}h
                             </div>
+                            <div className="pt-1 text-[11px] text-blue-400">
+                              Predicted: {f.predicted_expiry_at ? new Date(f.predicted_expiry_at).toLocaleString() : "—"}
+                            </div>
+                            {f.scanned_expiry_at && (
+                              <div className="text-[11px] text-emerald-400">
+                                Scanned: {new Date(f.scanned_expiry_at).toLocaleString()}
+                              </div>
+                            )}
                           </>
                         )}
                       </div>

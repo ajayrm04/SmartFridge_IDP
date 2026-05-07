@@ -161,11 +161,22 @@ export const getOverview = createServerFn({ method: "GET" }).handler(async () =>
         })
       : 0;
     const remH = remainingHours(realTimeSpoilage, ratePerH);
+    const predictedExpiryAt = isFinite(remH)
+      ? new Date(currentTime.getTime() + remH * 60 * 60 * 1000).toISOString()
+      : null;
     const risk =
       realTimeSpoilage > 75 ? "critical"
       : realTimeSpoilage > 45 ? "warning"
       : "safe";
-    return { ...f, spoilage_pct: +realTimeSpoilage.toFixed(3), current_rate: +ratePerH.toFixed(3), remaining_hours: isFinite(remH) ? +remH.toFixed(1) : null, risk };
+    return {
+      ...f,
+      spoilage_pct: +realTimeSpoilage.toFixed(3),
+      current_rate: +ratePerH.toFixed(3),
+      remaining_hours: isFinite(remH) ? +remH.toFixed(1) : null,
+      predicted_expiry_at: predictedExpiryAt,
+      scanned_expiry_at: f.scanned_expiry_at ?? null,
+      risk,
+    };
   });
 
   const avgSpoilage = items.length
@@ -200,6 +211,19 @@ export const removeFoodItem = createServerFn({ method: "POST" })
   .inputValidator((d: { id: string }) => d)
   .handler(async ({ data }) => {
     await (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("food_items").delete().eq("id", data.id);
+    return { ok: true };
+  });
+
+export const updateFoodScannedExpiry = createServerFn({ method: "POST" })
+  .inputValidator((d: { id: string; scannedExpiryAt: string }) => d)
+  .handler(async ({ data }) => {
+    await (await import("@/integrations/supabase/client.server")).supabaseAdmin
+      .from("food_items")
+      .update({
+        scanned_expiry_at: data.scannedExpiryAt,
+        scanned_expiry_date: data.scannedExpiryAt.slice(0, 10),
+      })
+      .eq("id", data.id);
     return { ok: true };
   });
 
@@ -364,7 +388,40 @@ export const getForecast = createServerFn({ method: "GET" })
       }
       points.push(row);
     }
-    return { points, foods: foods.map((f: any) => f.name) };
+    const nowMs = currentTime.getTime();
+    const foodDetails = (foods as any[]).map((f) => {
+      const currentSpoilage = calculateRealTimeSpoilage({
+        storedAt: f.stored_at || f.last_updated || currentTime.toISOString(),
+        currentTime,
+        tempC: Number(latest.temperature),
+        rh: Number(latest.humidity),
+        ammonia: Number(latest.ammonia),
+        category: f.category,
+        baseShelfLifeHours: Number(f.base_shelf_life_hours),
+        EaKJ: Number(f.activation_energy_kj),
+      });
+      const rate = spoilageDelta({
+        tempC: Number(latest.temperature), rh: Number(latest.humidity),
+        ammonia: Number(latest.ammonia),
+        category: f.category,
+        baseShelfLifeHours: Number(f.base_shelf_life_hours),
+        EaKJ: Number(f.activation_energy_kj), dtHours: 1,
+      });
+      const predictedHoursToSpoilage = rate > 0 ? Math.max(0, (100 - currentSpoilage) / rate) : null;
+      const predictedExpiryAt = predictedHoursToSpoilage == null
+        ? null
+        : new Date(nowMs + predictedHoursToSpoilage * 60 * 60 * 1000).toISOString();
+
+      return {
+        id: f.id,
+        name: f.name,
+        currentSpoilage: +currentSpoilage.toFixed(3),
+        predictedExpiryAt,
+        scannedExpiryAt: f.scanned_expiry_at ?? null,
+      };
+    });
+
+    return { points, foods: foods.map((f: any) => f.name), foodDetails };
   });
 
 // Arrhenius curve data
