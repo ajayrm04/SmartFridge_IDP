@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Trash2, Timer } from "lucide-react";
+import { Plus, Trash2, Timer, Thermometer, Droplets, Wind, TrendingUp, AlertTriangle, Clock, Activity } from "lucide-react";
 import { useLiveQuery } from "@/hooks/use-live-query";
 import { getOverview, addFoodItem, removeFoodItem } from "@/fridge.functions";
 import { PageHeader, Panel } from "@/components/ui-bits";
@@ -10,6 +10,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from "@/components/ui/dialog";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/shelf-life")({
@@ -28,6 +31,8 @@ const CATEGORY_DEFAULTS: Record<string, { Ea: number; hours: number }> = {
 function ShelfLifePage() {
   const { data, refresh } = useLiveQuery(() => getOverview(), 3000);
   const foods = data?.foods ?? [];
+  const latest = data?.latest;
+  const avgSpoilage = data?.avgSpoilage ?? 0;
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState({ name: "", category: "dairy", zone: "main" });
 
@@ -47,12 +52,16 @@ function ShelfLifePage() {
     refresh();
   };
 
+  const criticalItems = foods.filter((f: any) => f.risk === "critical").length;
+  const warningItems = foods.filter((f: any) => f.risk === "warning").length;
+  const safeItems = foods.filter((f: any) => f.risk === "safe").length;
+
   return (
-    <div className="mx-auto max-w-7xl">
+    <div className="mx-auto max-w-7xl space-y-6">
       <PageHeader
         eyebrow="Operations · Inventory"
         title="Shelf-life intelligence"
-        description="Each item degrades according to live Arrhenius kinetics and humidity."
+        description="Real-time spoilage tracking with Arrhenius kinetics, environmental factors, and predictive analytics."
         action={
           <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
@@ -87,19 +96,106 @@ function ShelfLifePage() {
         }
       />
 
+      {/* Environmental Factors Dashboard */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Temperature</CardTitle>
+            <Thermometer className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{latest?.temperature?.toFixed(1) ?? "--"}°C</div>
+            <p className="text-xs text-muted-foreground">Current fridge temperature</p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Humidity</CardTitle>
+            <Droplets className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{latest?.humidity?.toFixed(0) ?? "--"}%</div>
+            <p className="text-xs text-muted-foreground">Relative humidity level</p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Gas Level</CardTitle>
+            <Wind className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{latest?.ammonia?.toFixed(2) ?? "--"}</div>
+            <p className="text-xs text-muted-foreground">Ammonia concentration</p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Avg Spoilage</CardTitle>
+            <Activity className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{avgSpoilage}%</div>
+            <p className="text-xs text-muted-foreground">Across all items</p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Risk Summary */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <Card className="border-green-200 bg-black-50/50">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-green-700">Safe Items</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-3xl font-bold text-green-600">{safeItems}</div>
+            <p className="text-xs text-green-600">Under 45% spoilage</p>
+          </CardContent>
+        </Card>
+
+        <Card className="border-yellow-200 bg-black-50/50">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-yellow-700">Warning Items</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-3xl font-bold text-yellow-600">{warningItems}</div>
+            <p className="text-xs text-yellow-600">45-75% spoilage</p>
+          </CardContent>
+        </Card>
+
+        <Card className="border-red-200 bg-black-50/50">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-red-700">Critical Items</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-3xl font-bold text-red-600">{criticalItems}</div>
+            <p className="text-xs text-red-600">Over 75% spoilage</p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Detailed Food Items Table */}
       <Panel>
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold">Item Spoilage Details</h3>
+          <p className="text-sm text-muted-foreground">Real-time spoilage rates calculated using Arrhenius kinetics with environmental factors</p>
+        </div>
+
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
               <tr className="border-b border-border/50">
-                <th className="py-2 text-left font-medium">Item</th>
-                <th className="py-2 text-left font-medium">Category</th>
-                <th className="py-2 text-left font-medium">Zone</th>
-                <th className="py-2 text-left font-medium">Spoilage</th>
-                <th className="py-2 text-right font-medium">Rate /h</th>
-                <th className="py-2 text-right font-medium">Remaining</th>
-                <th className="py-2 text-right font-medium">Risk</th>
-                <th className="py-2"></th>
+                <th className="py-3 text-left font-medium">Item</th>
+                <th className="py-3 text-left font-medium">Category</th>
+                <th className="py-3 text-left font-medium">Zone</th>
+                <th className="py-3 text-left font-medium">Spoilage Progress</th>
+                <th className="py-3 text-center font-medium">Current Rate</th>
+                <th className="py-3 text-center font-medium">Time Remaining</th>
+                <th className="py-3 text-center font-medium">Risk Level</th>
+                <th className="py-3 text-center font-medium">Environmental Impact</th>
+                <th className="py-3"></th>
               </tr>
             </thead>
             <tbody>
@@ -110,36 +206,71 @@ function ShelfLifePage() {
                     initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                     className="border-b border-border/30 hover:bg-surface/40"
                   >
-                    <td className="py-3 font-medium">{f.name}</td>
-                    <td className="py-3 text-muted-foreground capitalize">{f.category}</td>
-                    <td className="py-3 text-muted-foreground capitalize">{f.zone_id}</td>
-                    <td className="py-3">
-                      <div className="flex items-center gap-2">
-                        <div className="relative h-1.5 w-32 overflow-hidden rounded-full bg-surface-elev">
-                          <motion.div
-                            initial={false}
-                            animate={{ width: `${Math.min(100, f.spoilage_pct)}%` }}
-                            className={`h-full rounded-full ${
-                              f.risk === "critical" ? "bg-destructive" :
-                              f.risk === "warning" ? "bg-[oklch(0.82_0.16_75)]" :
-                              "bg-gradient-to-r from-primary to-chart-5"
-                            }`}
-                          />
-                        </div>
-                        <span className="text-xs tabular-nums text-muted-foreground">{f.spoilage_pct.toFixed(1)}%</span>
+                    <td className="py-4">
+                      <div>
+                        <div className="font-medium">{f.name}</div>
+                        <div className="text-xs text-muted-foreground">ID: {f.id}</div>
                       </div>
                     </td>
-                    <td className="py-3 text-right tabular-nums text-muted-foreground">{f.current_rate?.toFixed(2)}%</td>
-                    <td className="py-3 text-right tabular-nums">
-                      <span className="inline-flex items-center gap-1 text-xs">
-                        <Timer className="h-3 w-3 opacity-50" />
-                        {f.remaining_hours == null ? "—" : `${f.remaining_hours.toFixed(0)}h`}
-                      </span>
+                    <td className="py-4">
+                      <Badge variant="outline" className="capitalize">{f.category}</Badge>
                     </td>
-                    <td className="py-3 text-right">
+                    <td className="py-4 text-muted-foreground capitalize">{f.zone_id}</td>
+                    <td className="py-4">
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-3">
+                          <Progress value={Math.min(100, f.spoilage_pct)} className="w-32 h-2" />
+                          <span className="text-sm font-medium tabular-nums">{f.spoilage_pct.toFixed(1)}%</span>
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          Base shelf life: {f.base_shelf_life_hours}h
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 text-center">
+                      <div className="space-y-1">
+                        <div className="text-lg font-bold tabular-nums text-primary">
+                          {f.current_rate?.toFixed(3)}%
+                        </div>
+                        <div className="text-xs text-muted-foreground">per hour</div>
+                        <div className="flex items-center justify-center gap-1">
+                          <TrendingUp className="h-3 w-3" />
+                          <span className="text-xs">Real-time</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 text-center">
+                      <div className="space-y-1">
+                        {f.remaining_hours == null ? (
+                          <div className="text-muted-foreground">—</div>
+                        ) : (
+                          <>
+                            <div className="flex items-center justify-center gap-1 text-lg font-bold">
+                              <Clock className="h-4 w-4" />
+                              {f.remaining_hours.toFixed(0)}h
+                            </div>
+                            <div className="text-xs text-muted-foreground">
+                              {Math.floor(f.remaining_hours / 24)}d {Math.floor(f.remaining_hours % 24)}h
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    </td>
+                    <td className="py-4 text-center">
                       <RiskBadge risk={f.risk} />
                     </td>
-                    <td className="py-3 text-right">
+                    <td className="py-4">
+                      <div className="space-y-1 text-xs">
+                        <div className="flex items-center gap-1">
+                          <Thermometer className="h-3 w-3" />
+                          <span>Ea: {f.activation_energy_kj} kJ/mol</span>
+                        </div>
+                        <div className="text-muted-foreground">
+                          Stored: {new Date(f.stored_at).toLocaleDateString()}
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 text-right">
                       <Button size="icon" variant="ghost" onClick={() => handleRemove(f.id, f.name)}>
                         <Trash2 className="h-3.5 w-3.5 text-muted-foreground" />
                       </Button>
@@ -150,6 +281,16 @@ function ShelfLifePage() {
             </tbody>
           </table>
         </div>
+
+        {foods.length === 0 && (
+          <div className="text-center py-12">
+            <div className="text-muted-foreground mb-4">No food items being tracked</div>
+            <Button onClick={() => setOpen(true)}>
+              <Plus className="mr-2 h-4 w-4" />
+              Add your first item
+            </Button>
+          </div>
+        )}
       </Panel>
     </div>
   );

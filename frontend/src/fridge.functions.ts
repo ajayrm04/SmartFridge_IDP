@@ -222,65 +222,101 @@ export const resolveAlert = createServerFn({ method: "POST" })
     return { ok: true };
   });
 
-// ---- AI Recommendation (Lovable AI Gateway) ----
+// ---- AI Recommendation (Gemini API) ----
 export const generateRecommendation = createServerFn({ method: "POST" }).handler(async () => {
+  const { data: foods } = await (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("food_items").select("*");
   const { data: latest } = await (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("sensor_readings")
     .select("*").order("created_at", { ascending: false }).limit(1).maybeSingle();
-  const { data: foods } = await (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("food_items").select("*");
-  const { data: alerts } = await (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("alerts").select("*").eq("resolved", false).limit(5);
 
-  const apiKey = process.env.LOVABLE_API_KEY;
+  const apiKey = "YOUR KEY";
+  
+  const currentTime = new Date();
+  
+  // Build inventory context: items, locations, remaining time
+  const inventory = foods?.map((f: any) => {
+    const realTimeSpoilage = latest ? calculateRealTimeSpoilage({
+      storedAt: f.stored_at || f.last_updated || currentTime.toISOString(),
+      currentTime,
+      tempC: Number(latest.temperature),
+      rh: Number(latest.humidity),
+      ammonia: Number(latest.ammonia),
+      category: f.category,
+      baseShelfLifeHours: Number(f.base_shelf_life_hours),
+      EaKJ: Number(f.activation_energy_kj),
+    }) : Number(f.spoilage_pct);
+    
+    const ratePerH = latest ? spoilageDelta({
+      tempC: Number(latest.temperature),
+      rh: Number(latest.humidity),
+      ammonia: Number(latest.ammonia),
+      category: f.category,
+      baseShelfLifeHours: Number(f.base_shelf_life_hours),
+      EaKJ: Number(f.activation_energy_kj),
+      dtHours: 1,
+    }) : 0;
+    
+    const remH = remainingHours(realTimeSpoilage, ratePerH);
+    
+    return {
+      name: f.name,
+      category: f.category,
+      zone: f.zone_id,
+      spoilage_pct: +realTimeSpoilage.toFixed(1),
+      remaining_hours: isFinite(remH) ? +remH.toFixed(1) : null,
+    };
+  }) ?? [];
+
+  const ctx = {
+    fridge_inventory: inventory,
+    current_conditions: {
+      temperature: latest?.temperature ?? null,
+      humidity: latest?.humidity ?? null,
+      ammonia: latest?.ammonia ?? null,
+    },
+  };
+
   if (!apiKey) {
-    const fallback = "AI gateway not configured. Showing rule-based insight: " +
-      (latest && Number(latest.humidity) > 80
-        ? "High humidity is the dominant spoilage driver right now — reduce by venting briefly."
-        : "Conditions are within nominal range; continue monitoring.");
+    const fallback = "No items at critical risk. Continue monitoring.";
     await (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("ai_recommendations").insert({
       recommendation: fallback, severity: "INFO", generated_from: "fallback",
     });
-    return { recommendation: fallback };
+    return { recommendation: fallback, inventory: ctx };
   }
 
-  const currentTime = new Date();
-  const ctx = {
-    latestReading: latest,
-    foodItems: foods?.map((f: any) => {
-      const realTimeSpoilage = latest ? calculateRealTimeSpoilage({
-        storedAt: f.stored_at || f.last_updated || currentTime.toISOString(),
-        currentTime,
-        tempC: Number(latest.temperature),
-        rh: Number(latest.humidity),
-        ammonia: Number(latest.ammonia),
-        category: f.category,
-        baseShelfLifeHours: Number(f.base_shelf_life_hours),
-        EaKJ: Number(f.activation_energy_kj),
-      }) : Number(f.spoilage_pct);
-      return { name: f.name, category: f.category, spoilage: +realTimeSpoilage.toFixed(1) };
-    }),
-    activeAlerts: alerts?.map((a: any) => `${a.severity}: ${a.message}`),
-  };
+  // Direct Google Gemini API endpoint
+  const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
-  const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+  console.log(JSON.stringify(ctx, null, 2))
+  const res = await fetch(API_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: "google/gemini-2.5-flash",
-      messages: [
-        { role: "system", content: "You are a refrigeration domain expert. Given live sensor data and food state, produce ONE actionable recommendation in 1-2 sentences. Be specific. No preamble." },
-        { role: "user", content: `Current state:\n${JSON.stringify(ctx, null, 2)}` },
-      ],
+      contents: [{
+        parts: [{
+          text: `You are a refrigeration expert. Based on the fridge inventory below, produce ONE actionable recommendation in 1-2 sentences. Focus on items expiring soon. Be specific. No preamble.\n\n${JSON.stringify(ctx, null, 2)}`
+        }]
+      }]
     }),
   });
+
   if (!res.ok) {
-    const txt = await res.text();
-    return { recommendation: `AI gateway error (${res.status}): ${txt.slice(0, 200)}` };
+    const errorData = await res.json() as any;
+    const errorMsg = errorData.error?.message || "Unknown error";
+    return { recommendation: `Error: ${errorMsg.slice(0, 100)}`, inventory: ctx };
   }
+
   const json = await res.json() as any;
-  const rec = json.choices?.[0]?.message?.content?.trim() ?? "No recommendation produced.";
+  console.log(json)
+  const rec = json.candidates?.[0]?.content?.parts?.[0]?.text?.trim() ?? "No recommendation produced.";
+
   await (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("ai_recommendations").insert({
-    recommendation: rec, severity: "INFO", generated_from: "gemini-2.5-flash",
+    recommendation: rec, 
+    severity: "INFO", 
+    generated_from: "gemini-2.5-flash",
   });
-  return { recommendation: rec };
+
+  console.log({recommendation: rec, inventory: ctx})
+  return { recommendation: rec, inventory: ctx };
 });
 
 export const getRecommendations = createServerFn({ method: "GET" }).handler(async () => {
