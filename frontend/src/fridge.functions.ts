@@ -1,58 +1,66 @@
 import { createServerFn } from "@tanstack/react-start";
 import { spoilageDelta, remainingHours, arrheniusRate, humidityFactor, pidStep } from "@/lib/spoilage";
 
+// The URL of your Node.js backend
+const BACKEND_URL = "http://localhost:3000";
 
-// ---- Simulated reading generator (when no ESP32 is sending data) ----
-// Random walk anchored to target temp from system_settings, with PID-controlled compressor.
+// Keep this to track PID state between ticks
 let simState = {
-  temp: 6.5,
-  rh: 70,
-  ammonia: 0.4,
-  co2: 480,
-  ethylene: 1.2,
   pid: { integral: 0, lastError: 0 },
 };
 
 async function generateReading() {
+  // 1. Fetch REAL sensor data from your Node.js backend
+  const response = await fetch(`${BACKEND_URL}/data`);
+  const realData = await response.json();
+
+  // 2. Fetch system settings for PID and target temperature
   const { data: settings } = await (await import("@/integrations/supabase/client.server")).supabaseAdmin
     .from("system_settings").select("*").eq("id", 1).single();
+  
   const target = settings?.target_temp ?? 4;
 
-  // PID
+  // 3. Run PID calculation based on the REAL temperature from the ESP
   const { output, state } = pidStep(
-    simState.temp, target, simState.pid,
+    realData.temperature, 
+    target, 
+    simState.pid,
     { kp: settings?.kp ?? 2, ki: settings?.ki ?? 0.1, kd: settings?.kd ?? 0.5 },
     0.5
   );
   simState.pid = state;
+
+  // 4. Determine if Compressor/Fan should be ON
   const compressorOn = settings?.manual_override ? !!settings.compressor_manual : output > 25;
   const fanOn = settings?.manual_override ? !!settings.fan_manual : output > 10;
 
-  // Temp dynamics
-  const cooling = compressorOn ? -0.35 : 0;
-  const ambientLeak = 0.18;
-  simState.temp += cooling + ambientLeak + (Math.random() - 0.5) * 0.2;
-  simState.rh += (Math.random() - 0.48) * 1.2;
-  simState.rh = Math.max(45, Math.min(92, simState.rh));
-  simState.ammonia = Math.max(0, simState.ammonia + (Math.random() - 0.5) * 0.05);
-  simState.co2 = 10000;
-  simState.ethylene = Math.max(0, simState.ethylene + (Math.random() - 0.48) * 0.3);
+  // 5. SYNC THE PHYSICAL RELAY
+  // We send the command back to the Node.js backend so the ESP32 can fetch it
+  try {
+    if (compressorOn) {
+      await fetch(`${BACKEND_URL}/relay/on`);
+    } else {
+      await fetch(`${BACKEND_URL}/relay/off`);
+    }
+  } catch (err) {
+    console.error("Failed to sync relay command to backend:", err);
+  }
 
-  const energy = (compressorOn ? 110 : 8) + (fanOn ? 12 : 0) + Math.random() * 4;
-
+  // 6. Return the combined object for Supabase insertion
   return {
-    temperature: +simState.temp.toFixed(2),
-    humidity: +simState.rh.toFixed(1),
-    ammonia: +simState.ammonia.toFixed(3),
-    co2: +simState.co2.toFixed(0),
-    ethylene: +simState.ethylene.toFixed(2),
-    energy_w: +energy.toFixed(1),
+    temperature: Number(realData.temperature),
+    humidity: Number(realData.humidity),
+    ammonia: Number(realData.gas_level), // Mapping your MQ3 gas_level here
+    co2: 400, // Placeholder as MQ3 doesn't detect CO2 specifically
+    ethylene: 0, // Placeholder
+    energy_w: (compressorOn ? 110 : 8) + (fanOn ? 12 : 0), 
     compressor_on: compressorOn,
     fan_on: fanOn,
     pid_output: +output.toFixed(2),
     target,
   };
 }
+
 
 // Tick: insert reading + advance spoilage on all food items + maybe alert
 export const tickSimulation = createServerFn({ method: "POST" }).handler(async () => {

@@ -1,0 +1,68 @@
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon\r
+desktop.ini
+
+# Node.js dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+build/
+out/
+coverage/
+**/dist/
+**/build/
+**/out/
+**/coverage/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+logs/
+
+# VS Code
+.vscode/
+.history/
+
+# IDEs
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Misc
+*.swp
+*.swo
+*~
+
+# Frontend / framework artifacts
+.frontend/
+.cache/
+**/.cache/
+
+# Cloudflare / Wrangler
+.wrangler/
+
+# Supabase
+supabase/.temp/
+supabase/.credentials
+
+# Local system files
+*.local
+
+# Optional: ignore generated route tree if applicable
+frontend/routeTree.gen.ts
