@@ -2,7 +2,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { spoilageDelta, remainingHours, arrheniusRate, humidityFactor, pidStep } from "@/lib/spoilage";
 
 // The URL of your Node.js backend
-const BACKEND_URL = "http://localhost:3000";
+const BACKEND_URL = "http://127.0.0.1:3000";
 
 // Keep this to track PID state between ticks
 let simState = {
