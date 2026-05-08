@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Activity, Droplets, Wind, Zap, FlaskConical, Snowflake } from "lucide-react";
 import { LineChart, Line, ResponsiveContainer } from "recharts";
 import { useLiveQuery } from "@/hooks/use-live-query";
-import { getOverview } from "@/fridge.functions";
+import { getOverview, getLatestSensorReading } from "@/fridge.functions";
 import { PageHeader, Panel } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/sensors")({
@@ -11,9 +11,9 @@ export const Route = createFileRoute("/sensors")({
 });
 
 function SensorsPage() {
-  const { data } = useLiveQuery(() => getOverview(), 2500);
-  const latest = data?.latest;
-  const series = data?.tempSeries ?? [];
+  const { data: overviewData } = useLiveQuery(() => getOverview(), 4000);
+  const { data: latest } = useLiveQuery(() => getLatestSensorReading(), 1500);
+  const series = overviewData?.tempSeries ?? [];
 
   const cards = [
     { key: "temperature", label: "Temperature", unit: "°C", icon: Snowflake, safe: (v: number) => v < 6, danger: (v: number) => v > 8 },

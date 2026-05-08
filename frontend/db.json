@@ -5599,6 +5599,1997 @@
       "compressor_on": false,
       "fan_on": false,
       "created_at": "2026-05-07T21:14:22.765Z"
+    },
+    {
+      "id": 509,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:15:57.040Z"
+    },
+    {
+      "id": 510,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:15:59.791Z"
+    },
+    {
+      "id": 511,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:03.918Z"
+    },
+    {
+      "id": 512,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:07.780Z"
+    },
+    {
+      "id": 513,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:11.785Z"
+    },
+    {
+      "id": 514,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:15.783Z"
+    },
+    {
+      "id": 515,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:19.787Z"
+    },
+    {
+      "id": 516,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:23.784Z"
+    },
+    {
+      "id": 517,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:27.787Z"
+    },
+    {
+      "id": 518,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:31.779Z"
+    },
+    {
+      "id": 519,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:35.783Z"
+    },
+    {
+      "id": 520,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:39.779Z"
+    },
+    {
+      "id": 521,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:43.781Z"
+    },
+    {
+      "id": 522,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:47.796Z"
+    },
+    {
+      "id": 523,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:51.790Z"
+    },
+    {
+      "id": 524,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:55.967Z"
+    },
+    {
+      "id": 525,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:16:59.791Z"
+    },
+    {
+      "id": 526,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:03.785Z"
+    },
+    {
+      "id": 527,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 79,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:07.783Z"
+    },
+    {
+      "id": 528,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 79,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:11.798Z"
+    },
+    {
+      "id": 529,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:15.781Z"
+    },
+    {
+      "id": 530,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:19.793Z"
+    },
+    {
+      "id": 531,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:23.784Z"
+    },
+    {
+      "id": 532,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:27.816Z"
+    },
+    {
+      "id": 533,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:31.784Z"
+    },
+    {
+      "id": 534,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:35.792Z"
+    },
+    {
+      "id": 535,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 79,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:39.799Z"
+    },
+    {
+      "id": 536,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 79,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:43.793Z"
+    },
+    {
+      "id": 537,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:47.794Z"
+    },
+    {
+      "id": 538,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:51.782Z"
+    },
+    {
+      "id": 539,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:55.783Z"
+    },
+    {
+      "id": 540,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:17:59.792Z"
+    },
+    {
+      "id": 541,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:03.785Z"
+    },
+    {
+      "id": 542,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:07.786Z"
+    },
+    {
+      "id": 543,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 56,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:11.784Z"
+    },
+    {
+      "id": 544,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 62,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:15.789Z"
+    },
+    {
+      "id": 545,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 62,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:19.781Z"
+    },
+    {
+      "id": 546,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 60,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:23.786Z"
+    },
+    {
+      "id": 547,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 60,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:27.800Z"
+    },
+    {
+      "id": 548,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 57,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:31.783Z"
+    },
+    {
+      "id": 549,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 56,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:35.788Z"
+    },
+    {
+      "id": 550,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 56,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:39.790Z"
+    },
+    {
+      "id": 551,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:43.786Z"
+    },
+    {
+      "id": 552,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:47.790Z"
+    },
+    {
+      "id": 553,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:51.788Z"
+    },
+    {
+      "id": 554,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:55.816Z"
+    },
+    {
+      "id": 555,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:18:59.788Z"
+    },
+    {
+      "id": 556,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:03.791Z"
+    },
+    {
+      "id": 557,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:07.786Z"
+    },
+    {
+      "id": 558,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:11.782Z"
+    },
+    {
+      "id": 559,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:15.785Z"
+    },
+    {
+      "id": 560,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:19.786Z"
+    },
+    {
+      "id": 561,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:23.794Z"
+    },
+    {
+      "id": 562,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 68,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:27.791Z"
+    },
+    {
+      "id": 563,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:31.784Z"
+    },
+    {
+      "id": 564,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:35.785Z"
+    },
+    {
+      "id": 565,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 79,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:39.793Z"
+    },
+    {
+      "id": 566,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:43.789Z"
+    },
+    {
+      "id": 567,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:47.791Z"
+    },
+    {
+      "id": 568,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:51.786Z"
+    },
+    {
+      "id": 569,
+      "zone_id": "main",
+      "temperature": 30,
+      "humidity": 54,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:55.785Z"
+    },
+    {
+      "id": 570,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:19:59.780Z"
+    },
+    {
+      "id": 571,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 78,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:03.787Z"
+    },
+    {
+      "id": 572,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 78,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:07.788Z"
+    },
+    {
+      "id": 573,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:11.781Z"
+    },
+    {
+      "id": 574,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:15.784Z"
+    },
+    {
+      "id": 575,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:19.786Z"
+    },
+    {
+      "id": 576,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:23.785Z"
+    },
+    {
+      "id": 577,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:27.779Z"
+    },
+    {
+      "id": 578,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:31.773Z"
+    },
+    {
+      "id": 579,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:35.781Z"
+    },
+    {
+      "id": 580,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:39.791Z"
+    },
+    {
+      "id": 581,
+      "zone_id": "main",
+      "temperature": 29.9,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:43.794Z"
+    },
+    {
+      "id": 582,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:47.781Z"
+    },
+    {
+      "id": 583,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:51.781Z"
+    },
+    {
+      "id": 584,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 68,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:55.796Z"
+    },
+    {
+      "id": 585,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:20:59.777Z"
+    },
+    {
+      "id": 586,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:03.789Z"
+    },
+    {
+      "id": 587,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:07.793Z"
+    },
+    {
+      "id": 588,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 68,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:11.790Z"
+    },
+    {
+      "id": 589,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 68,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:15.779Z"
+    },
+    {
+      "id": 590,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:19.795Z"
+    },
+    {
+      "id": 591,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:23.792Z"
+    },
+    {
+      "id": 592,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:27.787Z"
+    },
+    {
+      "id": 593,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:31.794Z"
+    },
+    {
+      "id": 594,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:35.778Z"
+    },
+    {
+      "id": 595,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:39.780Z"
+    },
+    {
+      "id": 596,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:43.788Z"
+    },
+    {
+      "id": 597,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:47.781Z"
+    },
+    {
+      "id": 598,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:51.783Z"
+    },
+    {
+      "id": 599,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:55.805Z"
+    },
+    {
+      "id": 600,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:21:59.779Z"
+    },
+    {
+      "id": 601,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:03.782Z"
+    },
+    {
+      "id": 602,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:07.781Z"
+    },
+    {
+      "id": 603,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:11.784Z"
+    },
+    {
+      "id": 604,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:15.778Z"
+    },
+    {
+      "id": 605,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:19.789Z"
+    },
+    {
+      "id": 606,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:23.779Z"
+    },
+    {
+      "id": 607,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:27.791Z"
+    },
+    {
+      "id": 608,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:31.799Z"
+    },
+    {
+      "id": 609,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 75,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:35.782Z"
+    },
+    {
+      "id": 610,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 75,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:39.783Z"
+    },
+    {
+      "id": 611,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:43.778Z"
+    },
+    {
+      "id": 612,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:47.785Z"
+    },
+    {
+      "id": 613,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:51.796Z"
+    },
+    {
+      "id": 614,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:55.778Z"
+    },
+    {
+      "id": 615,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:22:59.787Z"
+    },
+    {
+      "id": 616,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:03.797Z"
+    },
+    {
+      "id": 617,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:07.786Z"
+    },
+    {
+      "id": 618,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:11.786Z"
+    },
+    {
+      "id": 619,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:15.779Z"
+    },
+    {
+      "id": 620,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:19.783Z"
+    },
+    {
+      "id": 621,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:23.784Z"
+    },
+    {
+      "id": 622,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:27.780Z"
+    },
+    {
+      "id": 623,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:31.784Z"
+    },
+    {
+      "id": 624,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:35.784Z"
+    },
+    {
+      "id": 625,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:39.782Z"
+    },
+    {
+      "id": 626,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:43.783Z"
+    },
+    {
+      "id": 627,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:47.784Z"
+    },
+    {
+      "id": 628,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:51.781Z"
+    },
+    {
+      "id": 629,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:55.793Z"
+    },
+    {
+      "id": 630,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:23:59.786Z"
+    },
+    {
+      "id": 631,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:03.783Z"
+    },
+    {
+      "id": 632,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:07.785Z"
+    },
+    {
+      "id": 633,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:11.784Z"
+    },
+    {
+      "id": 634,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:15.784Z"
+    },
+    {
+      "id": 635,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:19.787Z"
+    },
+    {
+      "id": 636,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:23.787Z"
+    },
+    {
+      "id": 637,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:27.917Z"
+    },
+    {
+      "id": 638,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:31.908Z"
+    },
+    {
+      "id": 639,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:35.936Z"
+    },
+    {
+      "id": 640,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:39.909Z"
+    },
+    {
+      "id": 641,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:43.911Z"
+    },
+    {
+      "id": 642,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:47.931Z"
+    },
+    {
+      "id": 643,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 67,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:51.922Z"
+    },
+    {
+      "id": 644,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 67,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:55.910Z"
+    },
+    {
+      "id": 645,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 79,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:24:59.949Z"
+    },
+    {
+      "id": 646,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:03.905Z"
+    },
+    {
+      "id": 647,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:07.933Z"
+    },
+    {
+      "id": 648,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:11.943Z"
+    },
+    {
+      "id": 649,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:15.906Z"
+    },
+    {
+      "id": 650,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:19.915Z"
+    },
+    {
+      "id": 651,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:24.086Z"
+    },
+    {
+      "id": 652,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:27.904Z"
+    },
+    {
+      "id": 653,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 68,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:31.929Z"
+    },
+    {
+      "id": 654,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:35.945Z"
+    },
+    {
+      "id": 655,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:39.916Z"
+    },
+    {
+      "id": 656,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:43.916Z"
+    },
+    {
+      "id": 657,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:47.944Z"
+    },
+    {
+      "id": 658,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:51.917Z"
+    },
+    {
+      "id": 659,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:55.928Z"
+    },
+    {
+      "id": 660,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 56,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:25:59.926Z"
+    },
+    {
+      "id": 661,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 56,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:26:03.911Z"
+    },
+    {
+      "id": 662,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:26:07.907Z"
+    },
+    {
+      "id": 663,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:26:12.025Z"
+    },
+    {
+      "id": 664,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:26:15.922Z"
+    },
+    {
+      "id": 665,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:26:19.902Z"
+    },
+    {
+      "id": 666,
+      "zone_id": "main",
+      "temperature": 29.8,
+      "humidity": 56,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:26:59.962Z"
+    },
+    {
+      "id": 667,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:27:59.940Z"
+    },
+    {
+      "id": 668,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:29:01.255Z"
+    },
+    {
+      "id": 669,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:29:35.821Z"
+    },
+    {
+      "id": 670,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:29:39.936Z"
+    },
+    {
+      "id": 671,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:29:43.876Z"
+    },
+    {
+      "id": 672,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:29:47.821Z"
+    },
+    {
+      "id": 673,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:01.327Z"
+    },
+    {
+      "id": 674,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:03.824Z"
+    },
+    {
+      "id": 675,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:07.831Z"
+    },
+    {
+      "id": 676,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:14.230Z"
+    },
+    {
+      "id": 677,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:18.754Z"
+    },
+    {
+      "id": 678,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:21.483Z"
+    },
+    {
+      "id": 679,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:23.822Z"
+    },
+    {
+      "id": 680,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:27.822Z"
+    },
+    {
+      "id": 681,
+      "zone_id": "main",
+      "temperature": 29.7,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:31.826Z"
+    },
+    {
+      "id": 682,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 69,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:35.820Z"
+    },
+    {
+      "id": 683,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:39.836Z"
+    },
+    {
+      "id": 684,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:43.816Z"
+    },
+    {
+      "id": 685,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:47.827Z"
+    },
+    {
+      "id": 686,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:51.819Z"
+    },
+    {
+      "id": 687,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 77,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:55.826Z"
+    },
+    {
+      "id": 688,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:30:59.945Z"
+    },
+    {
+      "id": 689,
+      "zone_id": "main",
+      "temperature": 29.6,
+      "humidity": 55,
+      "ammonia": 76,
+      "energy_w": 122,
+      "compressor_on": true,
+      "fan_on": true,
+      "created_at": "2026-05-08T05:31:03.906Z"
     }
   ],
   "food_items": [
@@ -5610,10 +7601,10 @@
       "base_shelf_life_hours": 56,
       "activation_energy_kj": 80,
       "stored_at": "2026-05-07T20:33:50.416Z",
-      "last_updated": "2026-05-07T21:14:22.767Z",
-      "spoilage_pct": 0.655,
+      "last_updated": "2026-05-08T05:31:03.915Z",
+      "spoilage_pct": 100,
       "created_at": "2026-05-07T20:33:50.416Z",
-      "updated_at": "2026-05-07T21:48:16.940Z",
+      "updated_at": "2026-05-08T05:31:03.915Z",
       "scanned_expiry_date": "2023-07-03",
       "scanned_expiry_at": "2023-07-03T18:29:59.000Z"
     },
@@ -5625,10 +7616,10 @@
       "base_shelf_life_hours": 240,
       "activation_energy_kj": 75,
       "stored_at": "2026-05-07T20:34:03.667Z",
-      "last_updated": "2026-05-07T21:14:22.767Z",
-      "spoilage_pct": 0.158,
+      "last_updated": "2026-05-08T05:31:03.915Z",
+      "spoilage_pct": 100,
       "created_at": "2026-05-07T20:34:03.667Z",
-      "updated_at": "2026-05-07T21:14:22.769Z"
+      "updated_at": "2026-05-08T05:31:03.927Z"
     },
     {
       "id": 3,
@@ -5638,10 +7629,10 @@
       "base_shelf_life_hours": 120,
       "activation_energy_kj": 85,
       "stored_at": "2026-05-07T20:34:14.217Z",
-      "last_updated": "2026-05-07T21:14:22.767Z",
-      "spoilage_pct": 0.292,
+      "last_updated": "2026-05-08T05:31:03.915Z",
+      "spoilage_pct": 100,
       "created_at": "2026-05-07T20:34:14.217Z",
-      "updated_at": "2026-05-07T21:28:55.706Z",
+      "updated_at": "2026-05-08T05:31:03.940Z",
       "scanned_expiry_date": "2023-07-03"
     },
     {
@@ -5652,11 +7643,11 @@
       "base_shelf_life_hours": 56,
       "activation_energy_kj": 80,
       "stored_at": "2026-05-07T21:30:21.405Z",
-      "last_updated": "2026-05-07T21:30:21.405Z",
-      "spoilage_pct": 0,
+      "last_updated": "2026-05-08T05:31:03.915Z",
+      "spoilage_pct": 100,
       "created_at": "2026-05-07T21:30:21.405Z",
       "scanned_expiry_date": "2023-07-03",
-      "updated_at": "2026-05-07T21:32:35.981Z"
+      "updated_at": "2026-05-08T05:31:03.954Z"
     },
     {
       "id": 5,
@@ -5666,15 +7657,1346 @@
       "base_shelf_life_hours": 56,
       "activation_energy_kj": 80,
       "stored_at": "2026-05-07T22:26:22.763Z",
-      "last_updated": "2026-05-07T22:26:22.763Z",
-      "spoilage_pct": 0,
+      "last_updated": "2026-05-08T05:31:03.915Z",
+      "spoilage_pct": 100,
       "created_at": "2026-05-07T22:26:22.764Z",
       "scanned_expiry_at": "2026-05-10T18:29:59.000Z",
       "scanned_expiry_date": "2026-05-10",
-      "updated_at": "2026-05-07T22:26:53.119Z"
+      "updated_at": "2026-05-08T05:31:03.966Z"
+    },
+    {
+      "id": 6,
+      "name": "paneer ",
+      "category": "dairy",
+      "zone_id": "main",
+      "base_shelf_life_hours": 56,
+      "activation_energy_kj": 80,
+      "stored_at": "2026-05-08T05:17:04.680Z",
+      "last_updated": "2026-05-08T05:31:03.915Z",
+      "spoilage_pct": 39.494,
+      "created_at": "2026-05-08T05:17:04.680Z",
+      "updated_at": "2026-05-08T05:31:03.979Z",
+      "scanned_expiry_at": "2026-05-10T18:29:59.000Z",
+      "scanned_expiry_date": "2026-05-10"
+    },
+    {
+      "id": 7,
+      "name": "PICKLE",
+      "category": "vegetables",
+      "zone_id": "main",
+      "base_shelf_life_hours": 216,
+      "activation_energy_kj": 80,
+      "stored_at": "2026-05-08T05:30:34.759Z",
+      "last_updated": "2026-05-08T05:31:03.915Z",
+      "spoilage_pct": 0.356,
+      "created_at": "2026-05-08T05:30:34.760Z",
+      "updated_at": "2026-05-08T05:31:03.989Z"
     }
   ],
-  "alerts": [],
+  "alerts": [
+    {
+      "id": 1,
+      "alert_type": "spoilage",
+      "severity": "CRITICAL",
+      "message": "Milk has crossed 80% spoilage — consume or remove.",
+      "created_at": "2026-05-08T05:15:57.079Z"
+    },
+    {
+      "id": 2,
+      "alert_type": "spoilage",
+      "severity": "CRITICAL",
+      "message": "Apple has crossed 80% spoilage — consume or remove.",
+      "created_at": "2026-05-08T05:15:57.096Z"
+    },
+    {
+      "id": 3,
+      "alert_type": "spoilage",
+      "severity": "CRITICAL",
+      "message": "Brinjal has crossed 80% spoilage — consume or remove.",
+      "created_at": "2026-05-08T05:15:57.115Z"
+    },
+    {
+      "id": 4,
+      "alert_type": "spoilage",
+      "severity": "CRITICAL",
+      "message": "cheese has crossed 80% spoilage — consume or remove.",
+      "created_at": "2026-05-08T05:15:57.132Z"
+    },
+    {
+      "id": 5,
+      "alert_type": "spoilage",
+      "severity": "CRITICAL",
+      "message": "bread has crossed 80% spoilage — consume or remove.",
+      "created_at": "2026-05-08T05:15:57.166Z"
+    },
+    {
+      "id": 6,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:15:57.210Z"
+    },
+    {
+      "id": 7,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:15:59.834Z"
+    },
+    {
+      "id": 8,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:03.962Z"
+    },
+    {
+      "id": 9,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:07.818Z"
+    },
+    {
+      "id": 10,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:11.820Z"
+    },
+    {
+      "id": 11,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:15.819Z"
+    },
+    {
+      "id": 12,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:19.842Z"
+    },
+    {
+      "id": 13,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:23.825Z"
+    },
+    {
+      "id": 14,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:27.824Z"
+    },
+    {
+      "id": 15,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:31.813Z"
+    },
+    {
+      "id": 16,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:35.823Z"
+    },
+    {
+      "id": 17,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:39.817Z"
+    },
+    {
+      "id": 18,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:43.817Z"
+    },
+    {
+      "id": 19,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:47.846Z"
+    },
+    {
+      "id": 20,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:51.831Z"
+    },
+    {
+      "id": 21,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:56.022Z"
+    },
+    {
+      "id": 22,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:16:59.831Z"
+    },
+    {
+      "id": 23,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:03.846Z"
+    },
+    {
+      "id": 24,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:07.851Z"
+    },
+    {
+      "id": 25,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:11.871Z"
+    },
+    {
+      "id": 26,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:15.836Z"
+    },
+    {
+      "id": 27,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:19.883Z"
+    },
+    {
+      "id": 28,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:23.861Z"
+    },
+    {
+      "id": 29,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:27.894Z"
+    },
+    {
+      "id": 30,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:31.835Z"
+    },
+    {
+      "id": 31,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:35.857Z"
+    },
+    {
+      "id": 32,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:39.883Z"
+    },
+    {
+      "id": 33,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:43.856Z"
+    },
+    {
+      "id": 34,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:47.879Z"
+    },
+    {
+      "id": 35,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:51.829Z"
+    },
+    {
+      "id": 36,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:55.836Z"
+    },
+    {
+      "id": 37,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:17:59.848Z"
+    },
+    {
+      "id": 38,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:03.887Z"
+    },
+    {
+      "id": 39,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:07.832Z"
+    },
+    {
+      "id": 40,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:11.845Z"
+    },
+    {
+      "id": 41,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:15.865Z"
+    },
+    {
+      "id": 42,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:19.836Z"
+    },
+    {
+      "id": 43,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:23.845Z"
+    },
+    {
+      "id": 44,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:27.906Z"
+    },
+    {
+      "id": 45,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:31.838Z"
+    },
+    {
+      "id": 46,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:35.839Z"
+    },
+    {
+      "id": 47,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:39.885Z"
+    },
+    {
+      "id": 48,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:43.855Z"
+    },
+    {
+      "id": 49,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:47.854Z"
+    },
+    {
+      "id": 50,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:51.841Z"
+    },
+    {
+      "id": 51,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:55.899Z"
+    },
+    {
+      "id": 52,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:18:59.886Z"
+    },
+    {
+      "id": 53,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:03.870Z"
+    },
+    {
+      "id": 54,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:07.868Z"
+    },
+    {
+      "id": 55,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:11.852Z"
+    },
+    {
+      "id": 56,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:15.863Z"
+    },
+    {
+      "id": 57,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:19.863Z"
+    },
+    {
+      "id": 58,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:23.858Z"
+    },
+    {
+      "id": 59,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:27.864Z"
+    },
+    {
+      "id": 60,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:31.852Z"
+    },
+    {
+      "id": 61,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:35.853Z"
+    },
+    {
+      "id": 62,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:39.858Z"
+    },
+    {
+      "id": 63,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:43.871Z"
+    },
+    {
+      "id": 64,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:47.854Z"
+    },
+    {
+      "id": 65,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:51.884Z"
+    },
+    {
+      "id": 66,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 30°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:55.860Z"
+    },
+    {
+      "id": 67,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:19:59.852Z"
+    },
+    {
+      "id": 68,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:03.849Z"
+    },
+    {
+      "id": 69,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:07.884Z"
+    },
+    {
+      "id": 70,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:11.851Z"
+    },
+    {
+      "id": 71,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:15.848Z"
+    },
+    {
+      "id": 72,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:19.852Z"
+    },
+    {
+      "id": 73,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:23.856Z"
+    },
+    {
+      "id": 74,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:27.858Z"
+    },
+    {
+      "id": 75,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:31.830Z"
+    },
+    {
+      "id": 76,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:35.858Z"
+    },
+    {
+      "id": 77,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:39.854Z"
+    },
+    {
+      "id": 78,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.9°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:43.865Z"
+    },
+    {
+      "id": 79,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:47.850Z"
+    },
+    {
+      "id": 80,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:51.856Z"
+    },
+    {
+      "id": 81,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:55.868Z"
+    },
+    {
+      "id": 82,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:20:59.848Z"
+    },
+    {
+      "id": 83,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:03.867Z"
+    },
+    {
+      "id": 84,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:07.862Z"
+    },
+    {
+      "id": 85,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:11.852Z"
+    },
+    {
+      "id": 86,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:15.871Z"
+    },
+    {
+      "id": 87,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:19.881Z"
+    },
+    {
+      "id": 88,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:23.858Z"
+    },
+    {
+      "id": 89,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:27.858Z"
+    },
+    {
+      "id": 90,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:31.864Z"
+    },
+    {
+      "id": 91,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:35.845Z"
+    },
+    {
+      "id": 92,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:39.875Z"
+    },
+    {
+      "id": 93,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:43.869Z"
+    },
+    {
+      "id": 94,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:47.849Z"
+    },
+    {
+      "id": 95,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:51.855Z"
+    },
+    {
+      "id": 96,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:55.885Z"
+    },
+    {
+      "id": 97,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:21:59.849Z"
+    },
+    {
+      "id": 98,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:03.847Z"
+    },
+    {
+      "id": 99,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:07.851Z"
+    },
+    {
+      "id": 100,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:11.869Z"
+    },
+    {
+      "id": 101,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:15.869Z"
+    },
+    {
+      "id": 102,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:19.909Z"
+    },
+    {
+      "id": 103,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:23.852Z"
+    },
+    {
+      "id": 104,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:27.855Z"
+    },
+    {
+      "id": 105,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:31.906Z"
+    },
+    {
+      "id": 106,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:35.839Z"
+    },
+    {
+      "id": 107,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:39.861Z"
+    },
+    {
+      "id": 108,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:43.835Z"
+    },
+    {
+      "id": 109,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:47.851Z"
+    },
+    {
+      "id": 110,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:51.872Z"
+    },
+    {
+      "id": 111,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:55.832Z"
+    },
+    {
+      "id": 112,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:22:59.876Z"
+    },
+    {
+      "id": 113,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:03.874Z"
+    },
+    {
+      "id": 114,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:07.843Z"
+    },
+    {
+      "id": 115,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:11.879Z"
+    },
+    {
+      "id": 116,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:15.857Z"
+    },
+    {
+      "id": 117,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:19.839Z"
+    },
+    {
+      "id": 118,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:23.896Z"
+    },
+    {
+      "id": 119,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:27.860Z"
+    },
+    {
+      "id": 120,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:31.865Z"
+    },
+    {
+      "id": 121,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:35.853Z"
+    },
+    {
+      "id": 122,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:39.860Z"
+    },
+    {
+      "id": 123,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:43.871Z"
+    },
+    {
+      "id": 124,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:47.859Z"
+    },
+    {
+      "id": 125,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:51.849Z"
+    },
+    {
+      "id": 126,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:55.863Z"
+    },
+    {
+      "id": 127,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:23:59.879Z"
+    },
+    {
+      "id": 128,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:03.868Z"
+    },
+    {
+      "id": 129,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:07.875Z"
+    },
+    {
+      "id": 130,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:11.858Z"
+    },
+    {
+      "id": 131,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:15.860Z"
+    },
+    {
+      "id": 132,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:19.871Z"
+    },
+    {
+      "id": 133,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:23.866Z"
+    },
+    {
+      "id": 134,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:27.983Z"
+    },
+    {
+      "id": 135,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:31.974Z"
+    },
+    {
+      "id": 136,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:36.000Z"
+    },
+    {
+      "id": 137,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:40.000Z"
+    },
+    {
+      "id": 138,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:43.980Z"
+    },
+    {
+      "id": 139,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:48.005Z"
+    },
+    {
+      "id": 140,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:51.989Z"
+    },
+    {
+      "id": 141,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:24:55.990Z"
+    },
+    {
+      "id": 142,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:00.058Z"
+    },
+    {
+      "id": 143,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:03.992Z"
+    },
+    {
+      "id": 144,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:07.995Z"
+    },
+    {
+      "id": 145,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:12.033Z"
+    },
+    {
+      "id": 146,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:15.981Z"
+    },
+    {
+      "id": 147,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:19.988Z"
+    },
+    {
+      "id": 148,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:24.161Z"
+    },
+    {
+      "id": 149,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:27.975Z"
+    },
+    {
+      "id": 150,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:32.013Z"
+    },
+    {
+      "id": 151,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:36.043Z"
+    },
+    {
+      "id": 152,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:39.987Z"
+    },
+    {
+      "id": 153,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:43.997Z"
+    },
+    {
+      "id": 154,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:48.013Z"
+    },
+    {
+      "id": 155,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:52.000Z"
+    },
+    {
+      "id": 156,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:25:56.003Z"
+    },
+    {
+      "id": 157,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:26:00.002Z"
+    },
+    {
+      "id": 158,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:26:03.983Z"
+    },
+    {
+      "id": 159,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:26:08.012Z"
+    },
+    {
+      "id": 160,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:26:12.116Z"
+    },
+    {
+      "id": 161,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:26:16.017Z"
+    },
+    {
+      "id": 162,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:26:19.976Z"
+    },
+    {
+      "id": 163,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.8°C exceeds safe range.",
+      "created_at": "2026-05-08T05:27:00.053Z"
+    },
+    {
+      "id": 164,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:28:00.008Z"
+    },
+    {
+      "id": 165,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:29:01.313Z"
+    },
+    {
+      "id": 166,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:29:35.882Z"
+    },
+    {
+      "id": 167,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:29:40.094Z"
+    },
+    {
+      "id": 168,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:29:43.960Z"
+    },
+    {
+      "id": 169,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:29:51.727Z"
+    },
+    {
+      "id": 170,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:01.574Z"
+    },
+    {
+      "id": 171,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:04.006Z"
+    },
+    {
+      "id": 172,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:10.050Z"
+    },
+    {
+      "id": 173,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:14.653Z"
+    },
+    {
+      "id": 174,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:19.227Z"
+    },
+    {
+      "id": 175,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:21.669Z"
+    },
+    {
+      "id": 176,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:23.891Z"
+    },
+    {
+      "id": 177,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:29.035Z"
+    },
+    {
+      "id": 178,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.7°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:31.896Z"
+    },
+    {
+      "id": 179,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:35.917Z"
+    },
+    {
+      "id": 180,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:40.376Z"
+    },
+    {
+      "id": 181,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:44.163Z"
+    },
+    {
+      "id": 182,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:47.918Z"
+    },
+    {
+      "id": 183,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:51.913Z"
+    },
+    {
+      "id": 184,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:30:55.956Z"
+    },
+    {
+      "id": 185,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:31:00.040Z"
+    },
+    {
+      "id": 186,
+      "alert_type": "temperature",
+      "severity": "WARNING",
+      "message": "Temperature spike: 29.6°C exceeds safe range.",
+      "created_at": "2026-05-08T05:31:03.998Z"
+    }
+  ],
   "control_logs": [
     {
       "id": 1,
@@ -10238,6 +13560,1635 @@
       "pid_output": 0,
       "reason": "Within target band",
       "created_at": "2026-05-07T21:14:22.772Z"
+    },
+    {
+      "id": 508,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:15:57.225Z"
+    },
+    {
+      "id": 509,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:15:59.842Z"
+    },
+    {
+      "id": 510,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:03.968Z"
+    },
+    {
+      "id": 511,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:07.825Z"
+    },
+    {
+      "id": 512,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:11.826Z"
+    },
+    {
+      "id": 513,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:15.828Z"
+    },
+    {
+      "id": 514,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:19.848Z"
+    },
+    {
+      "id": 515,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:23.831Z"
+    },
+    {
+      "id": 516,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:27.831Z"
+    },
+    {
+      "id": 517,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:31.820Z"
+    },
+    {
+      "id": 518,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:35.828Z"
+    },
+    {
+      "id": 519,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:39.824Z"
+    },
+    {
+      "id": 520,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:43.827Z"
+    },
+    {
+      "id": 521,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:47.859Z"
+    },
+    {
+      "id": 522,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:51.837Z"
+    },
+    {
+      "id": 523,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:56.034Z"
+    },
+    {
+      "id": 524,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:16:59.837Z"
+    },
+    {
+      "id": 525,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:03.854Z"
+    },
+    {
+      "id": 526,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:07.861Z"
+    },
+    {
+      "id": 527,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:11.882Z"
+    },
+    {
+      "id": 528,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:15.846Z"
+    },
+    {
+      "id": 529,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:19.894Z"
+    },
+    {
+      "id": 530,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:23.867Z"
+    },
+    {
+      "id": 531,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:27.900Z"
+    },
+    {
+      "id": 532,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:31.842Z"
+    },
+    {
+      "id": 533,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:35.867Z"
+    },
+    {
+      "id": 534,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:39.896Z"
+    },
+    {
+      "id": 535,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:43.865Z"
+    },
+    {
+      "id": 536,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:47.886Z"
+    },
+    {
+      "id": 537,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:51.835Z"
+    },
+    {
+      "id": 538,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:55.844Z"
+    },
+    {
+      "id": 539,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:17:59.855Z"
+    },
+    {
+      "id": 540,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:03.911Z"
+    },
+    {
+      "id": 541,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:07.838Z"
+    },
+    {
+      "id": 542,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:11.856Z"
+    },
+    {
+      "id": 543,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:15.873Z"
+    },
+    {
+      "id": 544,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:19.844Z"
+    },
+    {
+      "id": 545,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:23.853Z"
+    },
+    {
+      "id": 546,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:27.917Z"
+    },
+    {
+      "id": 547,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:31.847Z"
+    },
+    {
+      "id": 548,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:35.847Z"
+    },
+    {
+      "id": 549,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:39.923Z"
+    },
+    {
+      "id": 550,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:43.865Z"
+    },
+    {
+      "id": 551,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:47.871Z"
+    },
+    {
+      "id": 552,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:51.849Z"
+    },
+    {
+      "id": 553,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:55.907Z"
+    },
+    {
+      "id": 554,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:18:59.896Z"
+    },
+    {
+      "id": 555,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:03.880Z"
+    },
+    {
+      "id": 556,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:07.886Z"
+    },
+    {
+      "id": 557,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:11.876Z"
+    },
+    {
+      "id": 558,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:15.872Z"
+    },
+    {
+      "id": 559,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:19.873Z"
+    },
+    {
+      "id": 560,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:23.872Z"
+    },
+    {
+      "id": 561,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:27.873Z"
+    },
+    {
+      "id": 562,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:31.861Z"
+    },
+    {
+      "id": 563,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:35.870Z"
+    },
+    {
+      "id": 564,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:39.868Z"
+    },
+    {
+      "id": 565,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:43.902Z"
+    },
+    {
+      "id": 566,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:47.865Z"
+    },
+    {
+      "id": 567,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:51.931Z"
+    },
+    {
+      "id": 568,
+      "prev_temp": 30,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:55.870Z"
+    },
+    {
+      "id": 569,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:19:59.861Z"
+    },
+    {
+      "id": 570,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:03.856Z"
+    },
+    {
+      "id": 571,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:07.927Z"
+    },
+    {
+      "id": 572,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:11.864Z"
+    },
+    {
+      "id": 573,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:15.857Z"
+    },
+    {
+      "id": 574,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:19.865Z"
+    },
+    {
+      "id": 575,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:23.866Z"
+    },
+    {
+      "id": 576,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:27.869Z"
+    },
+    {
+      "id": 577,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:31.835Z"
+    },
+    {
+      "id": 578,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:35.873Z"
+    },
+    {
+      "id": 579,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:39.863Z"
+    },
+    {
+      "id": 580,
+      "prev_temp": 29.9,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:43.875Z"
+    },
+    {
+      "id": 581,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:47.859Z"
+    },
+    {
+      "id": 582,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:51.864Z"
+    },
+    {
+      "id": 583,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:55.877Z"
+    },
+    {
+      "id": 584,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:20:59.857Z"
+    },
+    {
+      "id": 585,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:03.873Z"
+    },
+    {
+      "id": 586,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:07.877Z"
+    },
+    {
+      "id": 587,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:11.858Z"
+    },
+    {
+      "id": 588,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:15.886Z"
+    },
+    {
+      "id": 589,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:19.891Z"
+    },
+    {
+      "id": 590,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:23.870Z"
+    },
+    {
+      "id": 591,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:27.868Z"
+    },
+    {
+      "id": 592,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:31.872Z"
+    },
+    {
+      "id": 593,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:35.854Z"
+    },
+    {
+      "id": 594,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:39.884Z"
+    },
+    {
+      "id": 595,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:43.877Z"
+    },
+    {
+      "id": 596,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:47.858Z"
+    },
+    {
+      "id": 597,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:51.863Z"
+    },
+    {
+      "id": 598,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:55.898Z"
+    },
+    {
+      "id": 599,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:21:59.869Z"
+    },
+    {
+      "id": 600,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:03.858Z"
+    },
+    {
+      "id": 601,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:07.860Z"
+    },
+    {
+      "id": 602,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:11.878Z"
+    },
+    {
+      "id": 603,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:15.878Z"
+    },
+    {
+      "id": 604,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:19.946Z"
+    },
+    {
+      "id": 605,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:23.858Z"
+    },
+    {
+      "id": 606,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:27.862Z"
+    },
+    {
+      "id": 607,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:31.945Z"
+    },
+    {
+      "id": 608,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:35.846Z"
+    },
+    {
+      "id": 609,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:39.872Z"
+    },
+    {
+      "id": 610,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:43.842Z"
+    },
+    {
+      "id": 611,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:47.859Z"
+    },
+    {
+      "id": 612,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:51.880Z"
+    },
+    {
+      "id": 613,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:55.842Z"
+    },
+    {
+      "id": 614,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:22:59.890Z"
+    },
+    {
+      "id": 615,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:03.882Z"
+    },
+    {
+      "id": 616,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:07.857Z"
+    },
+    {
+      "id": 617,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:11.899Z"
+    },
+    {
+      "id": 618,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:15.864Z"
+    },
+    {
+      "id": 619,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:19.847Z"
+    },
+    {
+      "id": 620,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:23.944Z"
+    },
+    {
+      "id": 621,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:27.869Z"
+    },
+    {
+      "id": 622,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:31.878Z"
+    },
+    {
+      "id": 623,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:35.861Z"
+    },
+    {
+      "id": 624,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:39.869Z"
+    },
+    {
+      "id": 625,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:43.882Z"
+    },
+    {
+      "id": 626,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:47.866Z"
+    },
+    {
+      "id": 627,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:51.862Z"
+    },
+    {
+      "id": 628,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:55.872Z"
+    },
+    {
+      "id": 629,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:23:59.888Z"
+    },
+    {
+      "id": 630,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:03.907Z"
+    },
+    {
+      "id": 631,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:07.886Z"
+    },
+    {
+      "id": 632,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:11.865Z"
+    },
+    {
+      "id": 633,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:15.869Z"
+    },
+    {
+      "id": 634,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:19.880Z"
+    },
+    {
+      "id": 635,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:23.875Z"
+    },
+    {
+      "id": 636,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:27.993Z"
+    },
+    {
+      "id": 637,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:31.982Z"
+    },
+    {
+      "id": 638,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:36.009Z"
+    },
+    {
+      "id": 639,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:40.014Z"
+    },
+    {
+      "id": 640,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:43.988Z"
+    },
+    {
+      "id": 641,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:48.013Z"
+    },
+    {
+      "id": 642,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:51.999Z"
+    },
+    {
+      "id": 643,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:24:56.002Z"
+    },
+    {
+      "id": 644,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:00.068Z"
+    },
+    {
+      "id": 645,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:04.001Z"
+    },
+    {
+      "id": 646,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:08.002Z"
+    },
+    {
+      "id": 647,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:12.047Z"
+    },
+    {
+      "id": 648,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:15.990Z"
+    },
+    {
+      "id": 649,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:19.998Z"
+    },
+    {
+      "id": 650,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:24.171Z"
+    },
+    {
+      "id": 651,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:27.982Z"
+    },
+    {
+      "id": 652,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:32.026Z"
+    },
+    {
+      "id": 653,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:36.058Z"
+    },
+    {
+      "id": 654,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:39.999Z"
+    },
+    {
+      "id": 655,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:44.010Z"
+    },
+    {
+      "id": 656,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:48.023Z"
+    },
+    {
+      "id": 657,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:52.014Z"
+    },
+    {
+      "id": 658,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:25:56.014Z"
+    },
+    {
+      "id": 659,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:26:00.017Z"
+    },
+    {
+      "id": 660,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:26:03.993Z"
+    },
+    {
+      "id": 661,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:26:08.025Z"
+    },
+    {
+      "id": 662,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:26:12.128Z"
+    },
+    {
+      "id": 663,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:26:16.030Z"
+    },
+    {
+      "id": 664,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:26:19.986Z"
+    },
+    {
+      "id": 665,
+      "prev_temp": 29.8,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:27:00.064Z"
+    },
+    {
+      "id": 666,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:28:00.019Z"
+    },
+    {
+      "id": 667,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:29:01.320Z"
+    },
+    {
+      "id": 668,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:29:35.892Z"
+    },
+    {
+      "id": 669,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:29:40.104Z"
+    },
+    {
+      "id": 670,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:29:43.972Z"
+    },
+    {
+      "id": 671,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:29:51.744Z"
+    },
+    {
+      "id": 672,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:01.617Z"
+    },
+    {
+      "id": 673,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:04.036Z"
+    },
+    {
+      "id": 674,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:10.595Z"
+    },
+    {
+      "id": 675,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:14.663Z"
+    },
+    {
+      "id": 676,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:19.237Z"
+    },
+    {
+      "id": 677,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:21.683Z"
+    },
+    {
+      "id": 678,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:23.900Z"
+    },
+    {
+      "id": 679,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:29.043Z"
+    },
+    {
+      "id": 680,
+      "prev_temp": 29.7,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:31.904Z"
+    },
+    {
+      "id": 681,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:35.952Z"
+    },
+    {
+      "id": 682,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:40.584Z"
+    },
+    {
+      "id": 683,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:44.196Z"
+    },
+    {
+      "id": 684,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:47.937Z"
+    },
+    {
+      "id": 685,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:51.924Z"
+    },
+    {
+      "id": 686,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:30:55.993Z"
+    },
+    {
+      "id": 687,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:31:00.055Z"
+    },
+    {
+      "id": 688,
+      "prev_temp": 29.6,
+      "target_temp": 4,
+      "cooling_level": 100,
+      "pid_output": 100,
+      "reason": "PID demanded cooling",
+      "created_at": "2026-05-08T05:31:04.011Z"
     }
   ],
   "ai_recommendations": [

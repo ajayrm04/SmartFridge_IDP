@@ -22,11 +22,12 @@ export const Route = createFileRoute("/shelf-life")({
 });
 
 const CATEGORY_DEFAULTS: Record<string, { Ea: number; hours: number }> = {
-  dairy: { Ea: 80, hours: 56 },
-  fruits: { Ea: 75, hours: 240 },
-  vegetables: { Ea: 85, hours: 120 },
-  meat: { Ea: 95, hours: 72 },
-  bakery: { Ea: 65, hours: 96 },
+  // Tuned for realistic home-fridge spoilage pacing under 2-6 C.
+  dairy: { Ea: 78, hours: 168 },      // ~7 days
+  fruits: { Ea: 72, hours: 336 },     // ~14 days
+  vegetables: { Ea: 80, hours: 216 }, // ~9 days
+  meat: { Ea: 92, hours: 96 },        // ~4 days
+  bakery: { Ea: 62, hours: 144 },     // ~6 days
 };
 
 function ShelfLifePage() {

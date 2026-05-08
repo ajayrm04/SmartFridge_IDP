@@ -9,10 +9,24 @@ let simState = {
   pid: { integral: 0, lastError: 0 },
 };
 
-async function generateReading() {
-  // 1. Fetch REAL sensor data from your Node.js backend
+async function fetchLatestBackendSensor() {
   const response = await fetch(`${BACKEND_URL}/data`);
   const realData = await response.json();
+  return {
+    zone_id: "main",
+    temperature: Number(realData.temperature ?? 0),
+    humidity: Number(realData.humidity ?? 0),
+    ammonia: Number(realData.gas_level ?? 0),
+    energy_w: Number(realData.energy_w ?? 0),
+    compressor_on: false,
+    fan_on: false,
+    created_at: realData.timestamp ?? new Date().toISOString(),
+  };
+}
+
+async function generateReading() {
+  // 1. Fetch REAL sensor data from your Node.js backend
+  const realData = await fetchLatestBackendSensor();
 
   // 2. Fetch system settings for PID and target temperature
   const { data: settings } = await (await import("@/integrations/supabase/client.server")).supabaseAdmin
@@ -22,7 +36,7 @@ async function generateReading() {
 
   // 3. Run PID calculation based on the REAL temperature from the ESP
   const { output, state } = pidStep(
-    realData.temperature, 
+    realData.temperature,
     target, 
     simState.pid,
     { kp: settings?.kp ?? 2, ki: settings?.ki ?? 0.1, kd: settings?.kd ?? 0.5 },
@@ -50,8 +64,8 @@ async function generateReading() {
   return {
     temperature:Number(realData.temperature),
     humidity: Number(realData.humidity),
-    ammonia: Number(realData.gas_level), // Mapping your MQ3 gas_level here
-    energy_w: (compressorOn ? 110 : 8) + (fanOn ? 12 : 0), 
+    ammonia: Number(realData.ammonia),
+    energy_w: Number(realData.energy_w) || (compressorOn ? 110 : 8) + (fanOn ? 12 : 0),
     compressor_on: compressorOn,
     fan_on: fanOn,
     pid_output: +output.toFixed(2),
@@ -123,37 +137,44 @@ export const tickSimulation = createServerFn({ method: "POST" }).handler(async (
   return r;
 });
 
+export const getLatestSensorReading = createServerFn({ method: "GET" }).handler(async () => {
+  const live = await fetchLatestBackendSensor();
+  return live;
+});
+
 // ---- Read endpoints ----
 export const getOverview = createServerFn({ method: "GET" }).handler(async () => {
-  const [foods, latest, alerts, settings, energySeries, tempSeries] = await Promise.all([
+  const [foods, latestDb, alerts, settings, energySeries, tempSeries, latestLive] = await Promise.all([
     (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("food_items").select("*").order("spoilage_pct", { ascending: false }),
     (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("sensor_readings").select("*").order("created_at", { ascending: false }).limit(1).maybeSingle(),
     (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("alerts").select("*").eq("resolved", false).order("created_at", { ascending: false }).limit(20),
     (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("system_settings").select("*").eq("id", 1).maybeSingle(),
     (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("sensor_readings").select("created_at,energy_w,compressor_on").order("created_at", { ascending: false }).limit(60),
     (await import("@/integrations/supabase/client.server")).supabaseAdmin.from("sensor_readings").select("created_at,temperature,humidity,ammonia").order("created_at", { ascending: false }).limit(60),
+    fetchLatestBackendSensor().catch(() => null),
   ]);
+  const latest = latestLive ?? latestDb.data;
 
   const items = foods.data ?? [];
   const currentTime = new Date();
   const enriched = items.map((f: any) => {
     // Calculate real-time spoilage for accurate display
-    const realTimeSpoilage = latest.data ? calculateRealTimeSpoilage({
+    const realTimeSpoilage = latest ? calculateRealTimeSpoilage({
       storedAt: f.stored_at || f.last_updated || currentTime.toISOString(),
       currentTime,
-      tempC: Number(latest.data.temperature),
-      rh: Number(latest.data.humidity),
-      ammonia: Number(latest.data.ammonia),
+      tempC: Number(latest.temperature),
+      rh: Number(latest.humidity),
+      ammonia: Number(latest.ammonia),
       category: f.category,
       baseShelfLifeHours: Number(f.base_shelf_life_hours),
       EaKJ: Number(f.activation_energy_kj),
     }) : Number(f.spoilage_pct);
 
-    const ratePerH = latest.data
+    const ratePerH = latest
       ? spoilageDelta({
-          tempC: Number(latest.data.temperature),
-          rh: Number(latest.data.humidity),
-          ammonia: Number(latest.data.ammonia),
+          tempC: Number(latest.temperature),
+          rh: Number(latest.humidity),
+          ammonia: Number(latest.ammonia),
           category: f.category,
           baseShelfLifeHours: Number(f.base_shelf_life_hours),
           EaKJ: Number(f.activation_energy_kj),
@@ -184,7 +205,7 @@ export const getOverview = createServerFn({ method: "GET" }).handler(async () =>
     : 0;
 
   return {
-    latest: latest.data,
+    latest,
     settings: settings.data,
     foods: enriched,
     alerts: alerts.data ?? [],
